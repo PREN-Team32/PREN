@@ -1,0 +1,20 @@
+\input{Sourcen/header}
+\begin{document}
+    %
+    % Deck- und Titelblatt
+    %
+    \input{Sourcen/Deckblatt}
+    \input{Sourcen/Titelblatt}
+    %
+    % Inhlatsverzeichnis umbenennen und anschliessend einen Seitenumbruch
+    %   
+    \renewcommand{\contentsname}{Inhalt}
+    \tableofcontents
+    \newpage
+    %
+    % Start mit der eigentlichen Arbeit
+    %    
+    \input{Sourcen/DasTeam/Personalblatt}
+    \input{Sourcen/DasTeam/Teamcharta}
+    \input{Sourcen/Organisation/Organisation}
+\end{document}
