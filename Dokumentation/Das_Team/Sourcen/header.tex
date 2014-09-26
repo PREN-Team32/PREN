@@ -47,6 +47,8 @@
 \usepackage{setspace}
 
 \usepackage{threeparttable} %benötigt um Fussnoten in einer Tabelle zu machen
+\usepackage{longtable}
+
 
 \usepackage{spreadtab} %benötigt um in Tabellen zu rechnen
 \usepackage{numprint}
@@ -190,6 +192,24 @@
 \newcommand{\footnoterecall}[1]{%
   \hyperref[#1]{\footnotemark[\value{#1}]}
 } 
+\makeatletter
+\providecommand{\rowno}[1][__empty__]
+{%
+  \ifthenelse{\isundefined{\c@rowno}}
+  {%
+    \newcounter{rowno}
+  }
+  {}%
+  	\ifthenelse{\equal{#1}{__empty__}}
+ 	 {%
+       \stepcounter{rowno}%
+     }
+     {%
+ 	   \setcounter{rowno}{#1}%
+     }%
+  \therowno%
+}
+\makeatother
 %
 %\makeglossaries
 %\include{wa/wa_glossar}
