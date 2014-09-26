@@ -1,20 +1,22 @@
-\input{Sourcen/header}
+\input{Common/header}
+\newcommand{\myTitel}{Anforderungsliste}
 \begin{document}
     %
     % Deck- und Titelblatt
     %
-    \input{Sourcen/Deckblatt}
-    \input{Sourcen/Titelblatt}
+    \input{Common/Deckblatt}
+    \input{Common/Titelblatt}
     %
     % Inhlatsverzeichnis umbenennen und anschliessend einen Seitenumbruch
-    %   
+    % 
+    \input{Anforderungsliste/Aenderungen}  
     \renewcommand{\contentsname}{Inhalt}
     \tableofcontents
     \newpage 
+    
+    \input{Anforderungsliste/Anforderungsliste}
+    
     %
     % Start mit der eigentlichen Arbeit
     %    
-    \input{Sourcen/DasTeam/Personalblatt}
-    \input{Sourcen/DasTeam/Teamcharta}
-    \input{Sourcen/Organisation/Organisation}
 \end{document}

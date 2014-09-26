@@ -1,22 +1,21 @@
-\input{Sourcen/header}
-
+\input{Common/header}
+\newcommand{\myTitel}{Das Team 32}
 \begin{document}
     %
     % Deck- und Titelblatt
     %
-    \input{Sourcen/Deckblatt}
-    \input{Sourcen/Titelblatt}
+    \input{Common/Deckblatt}
+    \input{Common/Titelblatt}
     %
     % Inhlatsverzeichnis umbenennen und anschliessend einen Seitenumbruch
-    % 
-    \input{Sourcen/Aenderungen}  
+    %   
     \renewcommand{\contentsname}{Inhalt}
     \tableofcontents
     \newpage 
-    
-    \input{Sourcen/Anforderungsliste}
-    
     %
     % Start mit der eigentlichen Arbeit
     %    
+    \input{DasTeam/Personalblatt}
+    \input{DasTeam/Teamcharta}
+    \input{DasTeam/Organisation}
 \end{document}
