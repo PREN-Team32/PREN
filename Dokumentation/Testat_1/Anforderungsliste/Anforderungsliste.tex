@@ -1,16 +1,5 @@
 \input{Sourcen/header}
-\makeatletter
-\providecommand{\rowno}[1][__empty__]{%
-\ifthenelse{\isundefined{\c@rowno}}{%
-\newcounter{rowno}}{}%
-\ifthenelse{\equal{#1}{__empty__}}{%
-\stepcounter{rowno}%
-}{%
-\setcounter{rowno}{#1}%
-}%
-\therowno%
-}
-\makeatother
+
 \begin{document}
     %
     % Deck- und Titelblatt
