@@ -1,7 +1,7 @@
 \section{Anforderungsliste}
 
     \begin{longtable}{ |p{.5cm}| p{.5cm} |p{4.2cm} |p{4cm} | p{1.5cm}|}\hline
-    \textbf{Nr.} & & \textbf{Bezeichnung}  & \textbf{Werte}                               & \textbf{Verantw.}\\ \hline
+    \textbf{Nr.} & & \textbf{Bezeichnung}      & \textbf{Werte}                           & \textbf{Verantw.}\\ \hline
            &   & \textbf{Gerät}                &                                          &\\ \hline
     \rowno & F & Gerätemasse maximal L x B x H & 50 cm x 50 cm x 100 cm                   & M \\  \hline
     \rowno & M & Gewicht                       & max. 6 kg ohne Stromversorgung, ohne CPU & E / M\\ \hline
@@ -12,14 +12,16 @@
     \rowno & W & Stoppbefehl                   & Akustisch und optisch                    & E / I\\ \hline
     \rowno & F & Autonomität	               & autonomer Ablauf                         & E / I\\ \hline
     \rowno & W & Autonomität                   & autonome Energieversorgung               & E / I\\ \hline
-    \rowno & M & Lautstärke				       & max. 100 dB                              & E / I / M\\ \hline
-    \rowno & M & Lautstärke				       & max. 60 dB                               & E / I / M\\ \hline
+%    \rowno & M & Lautstärke				       & max. 100 dB                              & E / I / M\\ \hline
+%    \rowno & M & Lautstärke				       & max. 60 dB                               & E / I / M\\ \hline
     \rowno & M & Treffgenauigkeit              & innerhalb 20 cm x 20 cm                  & E / I / M\\ \hline
     \rowno & W & Treffgenauigkeit              & innerhalb 10 cm x 10 cm                  & E / I / M\\ \hline
+    \rowno & F & Kübelerkennung                & Genau genug, um die Treffgenauigkeit sicher zu stellen & E / I \\ \hline
+    \rowno & F & Mechanismus bewegen*          & Ausrichtung oder Bewegen, um die Bälle in den Kübel zu befördern & E / I / M\\ \hline
            &   &                               &                                          & \\ \hline
            &   & \textbf{Randbedingungen}      &                                          & \\ \hline
            &   & \textbf{Kosten}               &                                          & \\ \hline
-    \rowno & F & Finanzieller Aufwand          & max. 600 CHF                             & \\ \hline
+    \rowno & F & Finanzieller Aufwand          & max. 600 CHF                             & E / I / M \\ \hline
            &   &                               &                                          & \\ \hline
            &   & \textbf{Tennisball}           &                                          & \\ \hline
     \rowno & F & Gewicht                       & 56 g - 59 g                              & Dozenten\\ \hline
@@ -43,7 +45,7 @@
            &   &                               &                                          & \\ \hline
            &   & \textbf{Umgebungsbedingungen} &                                          & \\ \hline
     \rowno & F & Umgebungstemperatur           & 10 °C bis 45 °C                          & Dozenten \\ \hline
-    \rowno & M & Windgeschwindigkeit           & < 1 km/h                                 & Dozenten\\ \hline
+    \rowno & M & Windgeschwindigkeit*          & < 1 km/h                                 & Dozenten\\ \hline
     \rowno & F & Lichtbedingung                & Abschirmung Infrarotstrahlung            & Dozenten\\ \hline
     \rowno & F & Lichtbedingung                & Gleichmässige Beleuchtung                & Dozenten\\ \hline
     \end{longtable}    
@@ -51,7 +53,8 @@
     F: Festanforderung\\
     M: Mindestanforderung\\
     W: Wunschziel\\
-    \vspace*{13.3cm}\\
+    *: Anforderung kann je nach Umsetzung stark variieren\\
+    \vspace*{12cm}\\
     \begin{tabular}{|p{2.1cm}|p{6.4cm}|p{1cm}|p{1.5cm}|}\hline
     Erstellt durch & Dozent akzeptiert & Version & \# Seiten\\ \hline 
     Team 32        &                   &  1.0    & \thepage\\
