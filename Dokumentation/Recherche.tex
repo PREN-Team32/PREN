@@ -1,0 +1,24 @@
+\input{Common/header}
+\newcommand{\myTitel}{Produktrecherche}
+\begin{document}
+    %
+    % Deck- und Titelblatt
+    %
+    \input{Common/Deckblatt}
+    \input{Common/Titelblatt}
+    %
+    % Inhlatsverzeichnis umbenennen und anschliessend einen Seitenumbruch
+    % 
+    %\input{Anforderungsliste/Aenderungen}  
+    \renewcommand{\contentsname}{Inhalt}
+    \tableofcontents
+    \newpage 
+    
+    \input{Recherche/Tabelle}
+    \input{Recherche/Drehmechanismus} 
+    \input{Recherche/Fahrantrieb}    
+    \input{Recherche/Flugobjekte}    
+    %
+    % Start mit der eigentlichen Arbeit
+    %    
+\end{document}
