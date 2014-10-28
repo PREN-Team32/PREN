@@ -1,0 +1,11 @@
+\section{Kommunikation}
+Da eine PC oder ein Prozessor in der Regel keine Peripherie wie Motoren oder ähnliches ansteuern, wird deshalb eine Hardware benötigt, die die Ansteuerung übernimmt. Zwischen der Rechnerhardware und der Ansteuerhardware braucht es eine Kommunikation . Dafür wurde recherchiert, welches Bussystem man dafür einsetzen könnte und was die jeweiligen Vor- und Nachteile sind. Weiter ist eine Weitere Möglichkeit von Nöten, um das Startsignal Drahtlos zu übertragen. 
+
+\subsection{USB}
+Der Universal Serial Bus ist eine gängige kabelgebundene serielle Schnittstelle, mit der Daten von einem Host an ein oder mehrere Slaves\footnote{Peripherie-Geräte} zu übertragen. Die Übertragung findet differentiell statt, was eine gute Störunempfindlichkeit mit sich bringt. Es können Datenraten von 1.5 $\frac{Mbit}{s}$ bis zu 10 $\frac{Gbit}{s}$ realisiert werden. Der Aufbau des Systems bedingt, dass ein Master-Controller eingesetzt wird. Dies ist bei PC's standardmässig vorhanden, was bei anderen Geräten problematisch sein kann. So gibt es zum Beispiel Mobil-Phones, die nur über eine Slave-Hardware verfügen. Weiter bietet der USB-Standard diverse mechanische Formen und Grössen eines Steckers.
+
+\subsection{Wi-Fi}
+IEEE 802.11 auch Wi-Fi genannt, bezeichnet ein Standard, um Daten kabellos zwischen meinst mobilen Geräte auszutauschen. Dabei wird ein Frequenzband im 2.4 GHz oder 5 GHz Bereich. Die Bandbreite beträgt je nach Standard zwischen 2 $\frac{Mbit}{s}$ und 6.7 $\frac{Gbit}{s}$. Die Reichweite beträgt zwischen 35 m bis 100 m. Wie aus dem Modul PRG2 bekannt ist, sind die Broadcast-Übermittlungen im HSLU-Netz gesperrt. Dies erschwert die Erstellung einer Datenverbindung, da die dynamisch vergebenen IP-Adressen benötigt werden.
+
+\subsection{Bluetooth}
+Dies ist ein Standard, mit dessen Hilfe Daten zwischen Geräten ausgetauscht werden können. Es werden Frequenzen im Bereich zwischen 2.402 GHz bis 2.480 GHz verwendet. Die Bandbreite beträgt je nach Version zwischen 1 $\frac{Mbit}{s}$ und 4 $\frac{Mbit}{s}$. Die Reichweite beträgt je nach Klasse zwischen 1m bis 100 m. Bluetooth verwendet ein Frequenzsprungverfahren, um allfälligen Störungen durch andere Geräte zu entgehen.
