@@ -1,0 +1,128 @@
+\section{Analyse}
+	Als Gesamtübersicht und als Eruierungshilfe der einzelnen Teilprobleme haben wir zu Beginn der Lösungsfindung eine Skizze entworfen. Diese beinhaltet alle nötigen Elemente des Produkts und stellt diese in Relation zueinander dar. 
+	
+	\begin{figure}[h!]
+		\includegraphics[width=0.9\textwidth]{Morphologie/Bilder/Blockschaltbild.jpg}
+		\centering
+		\caption{Grafische Darstellung der Aufgabenstellung}
+		\label{abb:Blockschaltbild} 
+	\end{figure}
+	
+	Aus der Abbildung \ref{abb:Blockschaltbild} ergeben sich folgende Teilprobleme:
+	\begin{itemize}
+		\item Startgerät / Endgerät
+		\item Startbefehlsübermittlung (drahtlos)
+		\item Rechenkapazität (immer inklusive Verteileinheit)
+		\item Versorgung der Steuerung / Sensoren
+		\item Sensorik (Korberkennung)
+		\item Ausgangslage der Bälle
+		\item Weg des Balles (zum Korb)
+	\end{itemize}
+	Zu jedem Teilproblem wurden nun auf Grundlage der Technologierecherche konkrete Lösungen aufgelistet.
+	
+	\subsection{Teilprobleme Beurteilen}
+		Um die Lösungsvorschläge der Teilprobleme untereinander vergleichen zu können, wurden zu jedem Teilproblem Bewertungskriterien definiert. Um die jeweiligen Kriterien bestmöglich und vollständig zu bewerten, legten wir die Werte im Plenum unter Einbezug aller Teammitglieder fest.
+		Die Faktoren zur Multiplikation der Bewertungspunkte wurden nach der Zielsetzung des Teams festgelegt:
+		
+		\begin{enumerate}
+			\item Treffgenauigkeit
+			\item Geschwindigkeit
+			\item Gewicht
+		\end{enumerate}
+		Der Faktor Zuverlässigkeit erhält in jedem Teilproblem eine hohe Wert, dies aufgrund der Zielsetzung die eine hohen Zuverlässigkeit aller beteiligten Elemente nach sich zieht. Der Aufwand belegt in der Regel einen kleinen Faktor, da er in einem Schulprojekt einen sekundären Stellenwert hat. Der Faktor der Kosten wurde bewusst im Mittelfeld angesiedelt, um den Fokus auf die Zielsetzung zu legen, aber trotzdem teuren Produkten ein Nachteil einzuhandeln.
+		In der Regel ist die Verteilung der Punkte pro Kriterium so geregelt, dass die schlechteste Lösung 1 Punkt erhält, die beste Lösung 5 Punkte, der Rest einen Wert dazwischen.\\
+		\\
+		Um die nachfolgenden Beschreibung zu den Kriterien richtig zu interpretieren, ist die Beurteilung in Anhang \ref{apx:Beurteilung} zusätzlich zum jeweiligen beschreibenden Text hinzuzuziehen. 
+		\begin{itemize}
+			\item Ausgangslage der Bälle (Annahme: Kugel (gefüllt mit Bällen) muss geometrisch sein)
+				\begin{itemize}
+					\item Geschwindigkeit\\
+					Alle Bälle in einer grossen Kugel braucht wenig Zeit, ist daher die beste Lösung. Der Drehkranz ist schwerfällig und langsam.
+					\item Gewicht\\
+					Der Trichter ist eine einfache, minimalistische Konstruktion, die wenig Gewicht aufweist. Der Drehkranz ist eine grosse, schwere Konstruktion mit mehreren Aktoren.
+					\item Zuverlässigkeit\\
+					Die Bälle in einem Trichter können schnell verstopfen. Ein sauber konstruiertes und aufgebautes Magazin ist sehr zuverlässig. 
+					\item Kosten\\
+					Der Trichter hat eine einfache, minimalistische Konstruktion, benötigt daher wenig Material. Der Drehkranz hat viele Aktoren und ein aufwändiges Design.
+					\item Aufwand\\
+					Die Umsetzung eines Trichters ist einfach und schnell erledigt. Der Drehkranz ist aufwändig.					
+				\end{itemize}
+			\item Rechenkapazität (Annahme: Embedded Prozessor günstiger Bauart)
+				\begin{itemize}
+					\item Zuverlässigkeit\\
+					Smartphone und Embedded Prozessoren sind sehr zuverlässig, da sie on-board sind. Ein Notebook als Recheneinheit ist aufgrund der vielen Datenübermittlung fehleranfällig.
+					\item Geschwindigkeit\\
+					Embedded Prozessoren sind für genau eine spezifische Aufgabe ausgelegt und dimensioniert. Ein Notebook als Recheneinheit ist aufgrund der vielen Datenübermittlung fehleranfällig und langsam.
+				 	\item Gewicht\\
+				 	Embedded Prozessoren sind für genau eine spezifische Aufgabe ausgelegt und dimensioniert, beinhalten nur das absolut Nötigste. Das Smartphone wird als Teil des Produktegewichts gerechnet.
+					\item Kosten\\
+					Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt. Ein eingebetteter Prozessor müsste zugekauft werden.
+					\item Aufwand\\
+					Für einen Embedded Prozessor müsste eine eigene Stromversorgung, drahtlos-Kommunikations-Modul, etc. gebaut werden. Ein Notebook beruht auf wohlbekannten, gut dokumentierten Technologien.
+				\end{itemize}
+				
+			\item Sensorik
+				\begin{itemize}
+					\item Geschwindigkeit\\
+					Eine Foto mit einer Smartphone Kamera ist schnell geschossen und kann direkt im Smartphone bearbeitet werden. Ein Laser muss viele Punkte abscannen und dabei mechanisch geschwenkt werden.
+					\item Genauigkeit\\
+					Ein Laser misst viele Punkte, kann daher ein sehr detailliertes Abbild schaffen. Ultraschallmessungen sind laut Recherchen nicht sehr präzise.  
+					\item Zuverlässigkeit\\
+					Laservermessungen sind dank des detaillierten Abbilds sehr zuverlässig in der Korberkennung. Infrarot ist aufgrund des vielen Fremdeinflusses (bsp. Lichtstrahler an Spielfeldrand) sehr unzuverlässig.
+					\item Kosten\\
+					Das Smartphone mit integrierter Kamera wird von einem Teammitglied zur Verfügung gestellt. Für einen Laser muss aufgrund der mechanischen Justierung zusätzliche Bauteile eingekauft werden.
+					\item Aufwand\\
+					Ein Smartphone mit integrierter Kamera beruht auf wohlbekannten, gut dokumentierten Technologien. Für einen Laser muss aufgrund der mechanischen Justierung zusätzlichen Aufwand betrieben werden
+				\end{itemize}
+				
+			\item Startbefehlsübermittlung
+				\begin{itemize}
+					\item Zuverlässigkeit\\
+					Bluetooth (und WLAN) basieren auf wohlbekannten, gut dokumentierten, standardisierten Technologien. Akustische Signale können einfach generiert und damit den Prozess erheblich stören.
+					\item Kosten\\
+					Bluetooth (und WLAN) sind Teil der eingebauten Technologie in einem modernen Smartphone / Notebook. Bei Infrarot und Akustischen Signalen kostet der Empfänger.
+					\item Aufwand\\
+					Bluetooth (und WLAN) sind Teil der eingebauten Technologie in einem modernen Smartphone / Notebook und beruhen auf wohlbekannten, gut dokumentierten, standardisierten Technologien. Das Auswerten eines Akustischen Signals ist aufwändig, fehleranfällig und benötigt zusätzliche Elektronik.
+				\end{itemize}
+				
+			\item Startgerät – Endgerät
+				\begin{itemize}
+					\item Zuverlässigkeit\\
+					Ein Notebook beruht auf wohlbekannten, gut dokumentierten, erprobten Technologien (drahtlos Kommunikation, sowie dazugehöriger Software). Taster muss neu gebaut werden, kann daher fehleranfällig sein.
+					\item Kosten\\
+					Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt. Ein Taster müsste neu gebaut respektive eingekauft werden.
+					\item Kompatibilität\\
+					Ein Smartphone besitzt nur ein Betriebssystem mit beschränkten Funktionen. Mit einem Notebook kann man viele verschiedene Software-Lösungen erstellen.
+					\item Aufwand\\
+					Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt, es entsteht vor allem softwaretechnischer Aufwand. Für einen Taster müsste ein eigenes kleines System entwickelt werden.
+				\end{itemize}
+				
+			\item Versorgung Steuerung / Sensorik
+				\begin{itemize}
+					\item Zuverlässigkeit\\
+					Ein Akku hat im Vergleich zu einem Netzteil höhere Spannungsschwankungen.
+					\item Gewicht\\
+					(hier als Vorteil, da als Ballast anrechenbar) Akku kann zur Gewichtsbestimmung entfernt werden.
+					\item Kosten\\
+					Netzteile sind günstig und alte Netzteile können für diese Aufgabe recycelt werden. Akkus müssten neu gekauft werden.
+					\item Aufwand\\
+					Netzteile können in kompletter Form gekauft werden. Akku’s müssen mit Elektronik stabilisiert und geregelt werden.
+				\end{itemize}
+				
+			\item Weg des Balles (Nachfolgende Bezeichnungen (..) beziehen sich auf die Nummerierung im Anhang \ref{apx:Beurteilung})			
+				\begin{itemize}
+					\item Geschwindigkeit\\
+					Je weniger Achsen bewegt werden müssen, desto schneller ist die jeweilige Lösung. (2) muss nur eine Drehbewegung ausführen. (5) muss drei Bewegungen ausführen.
+					\item Zuverlässigkeit\\
+					Je weniger Achsen bewegt werden müssen, desto zuverlässiger ist die Lösung. (2) muss nur eine Drehbewegung ausführen. (1) muss fliegen und zusätzlich noch ständig nachkorrigieren, äussre Störeinflüsse schwer vorauszusagen.
+					\item Genauigkeit\\
+					Je mehr Achsen bewegt werden müssen, je mehr Toleranzen, Fehler und Justierungen treten ein. (2) hat nur eine bewegliche Achse. (1) und (5) haben viele bewegliche Achsen und viele unbekannte Störeinflüsse.
+					\item Gewicht\\
+					Je mehr Achsen bewegt werden müssen, je mehr Antriebe, Materialien und Elektronik wird benötigt. (2) ist stationär. (4) und (5) haben viele bewegliche Achsen. 
+					\item Kosten\\
+					Je mehr Achsen bewegt werden müssen, je teurerer werden die jeweiligen Ausführungen. (2) ist stationär. (4) und (5) haben viele bewegliche Achsen. (1) kann zudem im Testfall abstürzen und so teure Teile zerstören.
+					\item Aufwand\\
+					(1) softwaretechnischer Aufwand ist immens. (2) stationäre Lösung im Vergleich eher einfach zu realisieren. (4) und (5) haben viele bewegliche Achsen, jede zusätzliche Achse erfordert weiteren Aufwand.	
+				\end{itemize}
+		\end{itemize}
+

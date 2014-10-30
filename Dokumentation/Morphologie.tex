@@ -12,11 +12,23 @@
     \input{Morphologie/Aenderungen}  
     \renewcommand{\contentsname}{Inhalt}
     \tableofcontents
-    \newpage 
-    
-    \input{Morphologie/kaesten}
+    \newpage
     
     %
     % Start mit der eigentlichen Arbeit
-    %    
+    %  
+    \input{Morphologie/Analyse}
+    \input{Morphologie/Grobkonzept}
+    
+    %\input{Morphologie/kaesten}
+    \appendix
+    % Beginn des Anhangs
+        \begin{appendix}
+            \clearpage
+            \pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
+            \section{Anhang}
+            %\newpage
+            \input{Morphologie/Anhang/Anhang}
+            \newpage
+        \end{appendix}  
 \end{document}
