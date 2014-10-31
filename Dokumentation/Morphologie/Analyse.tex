@@ -43,23 +43,33 @@
 		In der Regel ist die Verteilung der Punkte pro Kriterium so geregelt, dass die am schlechtesten geeignete Lösung 1 Punkt erhält, die beste Lösung 5 Punkte und die restlichen einen Wert dazwischen.\\
 		\\
 		Um die nachfolgende Beschreibung zu den Kriterien richtig zu interpretieren, ist die Beurteilung in Anhang \ref{apx:BeurteilungTeilprobleme} zusätzlich zum jeweiligen beschreibenden Text hinzuzuziehen. 
-		\subsubsection{Ausgangslage der Bälle}
-			Ist zusammen mit Anhang \ref{apx:AusgangslageDerBaelle} zu betrachten.
-			Es wird angenommen, dass die Kugel (gefüllt mit Bällen) geometrisch sein muss.
-			\begin{itemize}
-				\item Geschwindigkeit\\
-				Alle Bälle in einer grossen Kugel braucht wenig Zeit, ist daher die beste Lösung. Der Drehkranz ist schwerfällig und langsam.
-				\item Gewicht\\
-				Der Trichter ist eine einfache, minimalistische Konstruktion, die wenig Gewicht aufweist. Der Drehkranz ist eine grosse, schwere Konstruktion mit mehreren Aktoren.
-				\item Zuverlässigkeit\\
-				Die Bälle in einem Trichter können schnell verstopfen. Ein sauber konstruiertes und aufgebautes Magazin ist sehr zuverlässig. 
-				\item Kosten\\
-				Der Trichter hat eine einfache, minimalistische Konstruktion, benötigt daher wenig Material. Der Drehkranz hat viele Aktoren und ein aufwändiges Design.
-				\item Aufwand\\
-				Die Umsetzung eines Trichters ist einfach und schnell erledigt. Der Drehkranz ist aufwändig.					
-			\end{itemize}
-		\subsubsection{Rechenkapazität}
+		
+		\subsubsection{Startgerät – Endgerät}
 			Ist zusammen mit Anhang \ref{apx:StartgeraetEndgeraet} zu betrachten.
+			\begin{itemize}
+				\item Zuverlässigkeit\\
+				Ein Notebook beruht auf wohlbekannten, gut dokumentierten, erprobten Technologien (drahtlos Kommunikation, sowie dazugehöriger Software). Taster muss neu gebaut werden, kann daher fehleranfällig sein.
+				\item Kosten\\
+				Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt. Ein Taster müsste neu gebaut respektive eingekauft werden.
+				\item Kompatibilität\\
+				Ein Smartphone besitzt nur ein Betriebssystem mit beschränkten Funktionen. Mit einem Notebook kann man viele verschiedene Software-Lösungen erstellen.
+				\item Aufwand\\
+				Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt, es entsteht vor allem softwaretechnischer Aufwand. Für einen Taster müsste ein eigenes kleines System entwickelt werden.
+			\end{itemize}
+			
+		\subsubsection{Startbefehlsübermittlung}
+			Ist zusammen mit Anhang \ref{apx:Startbefehlsuebermittlung} zu betrachten.
+			\begin{itemize}
+				\item Zuverlässigkeit\\
+				Bluetooth (und WLAN) basieren auf wohlbekannten, gut dokumentierten, standardisierten Technologien. Akustische Signale können einfach generiert und damit den Prozess erheblich stören.
+				\item Kosten\\
+				Bluetooth (und WLAN) sind Teil der eingebauten Technologie in einem modernen Smartphone / Notebook. Bei Infrarot und Akustischen Signalen kostet der Empfänger.
+				\item Aufwand\\
+				Bluetooth (und WLAN) sind Teil der eingebauten Technologie in einem modernen Smartphone / Notebook und beruhen auf wohlbekannten, gut dokumentierten, standardisierten Technologien. Das Auswerten eines Akustischen Signals ist aufwändig, fehleranfällig und benötigt zusätzliche Elektronik.
+			\end{itemize}	
+			
+		\subsubsection{Rechenkapazität}
+			Ist zusammen mit Anhang \ref{apx:Rechenkapaziteat} zu betrachten.
 			Es wird davon ausgegangen, dass ein Embedded Prozessor günstiger Bauart eingesetzt würde.
 			\begin{itemize}
 				\item Zuverlässigkeit\\
@@ -89,30 +99,6 @@
 				Ein Smartphone mit integrierter Kamera beruht auf wohlbekannten, gut dokumentierten Technologien. Für einen Laser muss aufgrund der mechanischen Justierung zusätzlichen Aufwand betrieben werden
 			\end{itemize}
 			
-		\subsubsection{Startbefehlsübermittlung}
-			Ist zusammen mit Anhang \ref{apx:Startbefehlsuebermittlung} zu betrachten.
-			\begin{itemize}
-				\item Zuverlässigkeit\\
-				Bluetooth (und WLAN) basieren auf wohlbekannten, gut dokumentierten, standardisierten Technologien. Akustische Signale können einfach generiert und damit den Prozess erheblich stören.
-				\item Kosten\\
-				Bluetooth (und WLAN) sind Teil der eingebauten Technologie in einem modernen Smartphone / Notebook. Bei Infrarot und Akustischen Signalen kostet der Empfänger.
-				\item Aufwand\\
-				Bluetooth (und WLAN) sind Teil der eingebauten Technologie in einem modernen Smartphone / Notebook und beruhen auf wohlbekannten, gut dokumentierten, standardisierten Technologien. Das Auswerten eines Akustischen Signals ist aufwändig, fehleranfällig und benötigt zusätzliche Elektronik.
-			\end{itemize}
-			
-		\subsubsection{Startgerät – Endgerät}
-			Ist zusammen mit Anhang \ref{abb:StartgeraetEndgeraet} zu betrachten.
-			\begin{itemize}
-				\item Zuverlässigkeit\\
-				Ein Notebook beruht auf wohlbekannten, gut dokumentierten, erprobten Technologien (drahtlos Kommunikation, sowie dazugehöriger Software). Taster muss neu gebaut werden, kann daher fehleranfällig sein.
-				\item Kosten\\
-				Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt. Ein Taster müsste neu gebaut respektive eingekauft werden.
-				\item Kompatibilität\\
-				Ein Smartphone besitzt nur ein Betriebssystem mit beschränkten Funktionen. Mit einem Notebook kann man viele verschiedene Software-Lösungen erstellen.
-				\item Aufwand\\
-				Das Smartphone/Notebook wird von einem Teammitglied zur Verfügung gestellt, es entsteht vor allem softwaretechnischer Aufwand. Für einen Taster müsste ein eigenes kleines System entwickelt werden.
-			\end{itemize}
-			
 		\subsubsection{Versorgung Steuerung / Sensorik}
 			Ist zusammen mit Anhang \ref{apx:VersorgungSteuerungSensorik} zu betrachten.
 			\begin{itemize}
@@ -124,9 +110,28 @@
 				Netzteile sind günstig und alte Netzteile können für diese Aufgabe recycelt werden. Akkus müssten neu gekauft werden.
 				\item Aufwand\\
 				Netzteile können in kompletter Form gekauft werden. Akku’s müssen mit Elektronik stabilisiert und geregelt werden.
+			\end{itemize}	
+		
+		\subsubsection{Ausgangslage der Bälle}
+			Ist zusammen mit Anhang \ref{apx:AusgangslageDerBaelle} zu betrachten.
+			Es wird angenommen, dass die Kugel (gefüllt mit Bällen) geometrisch sein muss.
+			\begin{itemize}
+				\item Geschwindigkeit\\
+				Alle Bälle in einer grossen Kugel braucht wenig Zeit, ist daher die beste Lösung. Der Drehkranz ist schwerfällig und langsam.
+				\item Gewicht\\
+				Der Trichter ist eine einfache, minimalistische Konstruktion, die wenig Gewicht aufweist. Der Drehkranz ist eine grosse, schwere Konstruktion mit mehreren Aktoren.
+				\item Zuverlässigkeit\\
+				Die Bälle in einem Trichter können schnell verstopfen. Ein sauber konstruiertes und aufgebautes Magazin ist sehr zuverlässig. 
+				\item Kosten\\
+				Der Trichter hat eine einfache, minimalistische Konstruktion, benötigt daher wenig Material. Der Drehkranz hat viele Aktoren und ein aufwändiges Design.
+				\item Aufwand\\
+				Die Umsetzung eines Trichters ist einfach und schnell erledigt. Der Drehkranz ist aufwändig.					
 			\end{itemize}
 			
+			
 		\subsubsection{Weg des Balles}
+			Ist zusammen mit Anhang \ref{apx:WegDesBalles} zu betrachten.
+		
 		\enquote{Aus Startposition zu Korb fliegen und abwerfen} nachfolgend als (1) bezeichnet.\\	
 		\enquote{Aus Startposition, gewinkelt durch Luft werfen} nachfolgend als (2) bezeichnet.	\\
 		\enquote{Aus Startposition, seitlich bewegen, gerade aus durch Luft werfen} nachfolgend als (3) bezeichnet.\\
