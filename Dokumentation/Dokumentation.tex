@@ -1,4 +1,10 @@
 \input{Common/header}
+%\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
+                                            % Schriftgrösse = 10Punkte;
+                                            % Mathe.-Gl. Modus = linksbündig
+                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
+
+%\usepackage{Common/Layout}
 \newcommand{\myTitel}{Dokumentation}
 \begin{document}
     %
@@ -25,6 +31,8 @@
     \newpage
     \input{DasTeam/Teamcharta}
     \input{DasTeam/Zielsetzung}
+    \newpage
+    \input{Enddokumentation/Elektronik/BLDC/Ansteuerung}
     \newpage
    
 	  %Beschreibung des Lösungskonzept
@@ -64,7 +72,7 @@
     \begin{flushleft}
         \renewcommand{\refname}{Literatur- und Quellenverzeichnis}
 %        \{\refname}{Quellenverzeichnis}
-        \bibliography{Quellen/Quellen}{}    
+        \bibliography{Enddokumentation/Elektronik/BLDC/BLDC_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
     \end{flushleft}
     \appendix
     % Beginn des Anhangs
