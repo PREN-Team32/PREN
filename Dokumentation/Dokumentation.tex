@@ -7,7 +7,8 @@
 %\usepackage{Common/Layout}
 \newcommand{\myTitel}{Dokumentation}
 \newcommand{\BrushlessPath}{Enddokumentation/Elektronik/BLDC}
-\newcommand{\DasAndereTeam}{T27}
+\newcommand{\BLDCTeams}{T27 und T32}
+\newcommand{\BLDCcollab}{Dieses Kapitel ist eine Zusammenarbeit der Gruppen \BLDCTeams. }
 \begin{document}
     %
     % Deck- und Titelblatt
@@ -77,11 +78,15 @@
         \bibliography{Enddokumentation/Elektronik/BLDC/BLDC_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
     \end{flushleft}
     \appendix
+    
+    
     % Beginn des Anhangs
     
         \begin{appendix}
             \clearpage
             \pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
+            \addcontentsline{toc}{chapter}{Anhang}
+            \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} 
 
 	            \section{Anhang}
 	            
