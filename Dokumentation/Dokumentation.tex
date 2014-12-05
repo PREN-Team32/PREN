@@ -30,49 +30,46 @@
     \input{Enddokumentation/ManagementSummary}
     \newpage
     \input{Enddokumentation/Einleitung}
-    %\input{Enddokumentation/Danksagung}
     \newpage
-    %\input{DasTeam/Teamcharta}
     \input{DasTeam/Zielsetzung}
     \newpage
     \input{Enddokumentation/Varianten/VerschiedeneVarianten}
-    %\newpage
+    \newpage
+    
+    % Lösungskonzept
     \input{Enddokumentation/Loesungskonzept/Loesungskonzept}
+    \input{Enddokumentation/Loesungskonzept/Funktionsbeschreibung}
+    \input{Enddokumentation/Loesungskonzept/Geraeteuebersicht}
+    \input{Enddokumentation/Loesungskonzept/Startgeraet}
+    \input{Enddokumentation/Loesungskonzept/SmartphoneAlsMaster}
+    \input{Enddokumentation/Loesungskonzept/Controller}
+    \input{Enddokumentation/Loesungskonzept/AufbauMechanik}
+    \input{Enddokumentation/Loesungskonzept/Stelleinheit}
+    \input{Enddokumentation/Loesungskonzept/Foerderband}
+    \input{Enddokumentation/Loesungskonzept/Schwungraeder}
+    \input{Enddokumentation/Loesungskonzept/Versorgungskonzept}
+    \input{Enddokumentation/Loesungskonzept/Softwarearchitektur}
+    
+    
+    %Tests
     \input{Enddokumentation/Tests/Tests}
-    %Projektmanagement und Projektplanung 
+    \input{Enddokumentation/Tests/ZylinderTest}
+    \input{Enddokumentation/Tests/SchwngradTest}
+    \input{Enddokumentation/Tests/DrehzahlTest}
+    \newpage
+    \input{Enddokumentation/Tests/BrushlessMotorTest}
+    \input{Enddokumentation/Tests/AcrylglasTest}
+    \newpage
+    
+    %Projektführung
     \input{Enddokumentation/Projektplanung_Management/PlanungManagement}
-	  %Beschreibung des Lösungskonzept
-	    %\input{Loesungskonzept/Produktbeschreibung}
-	    %\newpage
-	    
-		    %  Übersichtszeichnungen / Übersichtsmodell
-		     
-		    %  Beschreibung der Komponenten 
-		    %  Ablaufdiagramme, Blockdiagramme 
-		    %  Beschreibung der Funktionalität der einzelnen Blöcke und deren Beziehungen 
-		    %  Schnittstellenbeschreibungen 
-		    %  Softwaresubsysteme 
-		    %  Wichtige Berechnungen (Resultate) 
-		    %  Beschreibung von Versuchen und Tests mit Ergebnissen
-		    %\input{Funktionstests/Ballmaschine} 
-		    %\newpage
-		    %\input{Funktionstests/BallmaschineDrehzahl}
-		    %\newpage
-		    %\input{Funktionstests/Pneumatikzylinder}
-		    %\newpage
-		    %\input{Funktionstests/BrushlessMotorAnsteuerung}
-		    %\newpage
+    \input{Enddokumentation/Projektplanung_Management/Kosten}
+    \input{Enddokumentation/Projektplanung_Management/Zeit}
     
-	  
-	    
-	    
-	% Schlussdiskussion mit den Unterabschnitten 
-	    %  Entwicklungskosten, zeitlicher Entwicklungsaufwand 
-	    %  Erfahrungen, „Lessons learned“, kritische Würdigung der Arbeiten 
-	    %  offene Punkte, Risiken und Ausblick auf PREN 2
+    %Reflexion
     \input{Enddokumentation/Schluss/Schluss}
-    
-    
+    \input{Enddokumentation/Schluss/Rueckblick}
+    \input{Enddokumentation/Schluss/Ausblick}
     \newpage
     \listoffigures 
     
@@ -81,66 +78,14 @@
 %        \{\refname}{Quellenverzeichnis}
         \bibliography{Enddokumentation/Elektronik/BLDC/BLDC_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
     \end{flushleft}
-    \appendix
-    
     
     % Beginn des Anhangs
+    \appendix  
     
-        \begin{appendix}
-            \clearpage
-            \pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
-            \addcontentsline{toc}{chapter}{Anhang}
-            \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} 
-
-	            \section{Anhang}
-	            
-	            % ========> Yves <=============   Subsections im Anhang? PDF's richtig einbinden?
-	            %  Aufgabenstellung (Original) 
-	            
-	            \input{Enddokumentation/Anhang/Berechnungen}
-	            
-	            \section{Aufgabenstellung}
-	            	\input{Enddokumentation/Anhang/Aufgabenstellung}
-	            \newpage
-	            
-	            %  Recherche 
-	            \input{Recherche/Tabelle}
-	            \input{Recherche/Kommunikation} 
-	            \input{Recherche/Object-Tracking}  
-	            \input{Recherche/Flugobjekte} 
-	            \input{Recherche/Fahrantrieb}   
-	            \input{Recherche/Drehmechanismus}
-	            \input{Recherche/Wurfmechanismen}
-	            \input{Recherche/Versorgung}      
-	            
-	            %  Produktanforderungen
-	            \newpage
-	            \input{Anforderungsliste/Anforderungsliste}
-	            
-	            %  Funktionsanalyse, Lösungsansätze und Bewertungen
-	            \newpage
-	            \input{Morphologie/Analyse}
-	            \input{Morphologie/Grobkonzept}
-	            \newpage
-	            \input{Morphologie/Feinkonzept}
-	            
-	            %  Detaillierte Berechnungen 
-	            
-	            %  Versuche und Tests: Details, Messprotokolle etc.
-	            \includegraphics[page=1,width=\textwidth]{Funktionstests/Ballmaschine.pdf}
-	            \newpage
-	            \includegraphics[page=1,width=\textwidth]{Funktionstests/BallmaschineDrehzahl.pdf}
-	            \newpage
-	            \includegraphics[page=1,width=\textwidth]{Funktionstests/Pneumatikzylinder.pdf}
-	            \newpage
-	            
-	            
-	            %  Meilensteinberichte, Protokolle, Pendenzenlisten
-	            \includegraphics[page=1,width=\textwidth]{Enddokumentation/Anhang/Extern/Besprechung_MS1.pdf}
-	            \newpage
-	            \includegraphics[page=1,width=\textwidth]{Enddokumentation/Anhang/Extern/Besprechung_MS2.pdf}
-	            \newpage
-            
-            \newpage
-        \end{appendix}  
+	\begin{appendix}
+		\clearpage
+		\pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
+		\section{Anhang}	            
+			\input{Enddokumentation/Anhang/Berechnungen}
+	\end{appendix}  
 \end{document}
