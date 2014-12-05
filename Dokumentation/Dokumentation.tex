@@ -1,9 +1,9 @@
 \input{Common/header}
 %\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
-                                            % Schriftgrösse = 10Punkte;
-                                            % Mathe.-Gl. Modus = linksbündig
-                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
-
+%                                            % Schriftgrösse = 10Punkte;
+%                                            % Mathe.-Gl. Modus = linksbündig
+%                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
+%
 %\usepackage{Common/Layout}
 \newcommand{\myTitel}{Dokumentation}
 \newcommand{\BrushlessPath}{Enddokumentation/BLDC}
@@ -16,27 +16,31 @@
     \input{Common/Deckblatt}
     \input{Common/Titelblatt}
     %
+    % Management Summary
+    % 
+    \input{Enddokumentation/ManagementSummary}
+    \addcontentsline{toc}{section}{Management Summary}
+    \newpage
+    %
     % Inhaltsverzeichnis umbenennen und anschliessend einen Seitenumbruch
     % 
     \renewcommand{\contentsname}{Inhalt}
     \tableofcontents
     \newpage
-    
     %
     % Start mit der eigentlichen Arbeit
     %  
     \input{Enddokumentation/Abstract}
-    \newpage
-    \input{Enddokumentation/ManagementSummary}
+    \addcontentsline{toc}{section}{Abstract}
     \newpage
     \input{Enddokumentation/Einleitung}
     \newpage
     \input{DasTeam/Zielsetzung}
     \newpage
     \input{Enddokumentation/Varianten/VerschiedeneVarianten}
-    \newpage
-    
+    %
     % Lösungskonzept
+    %
     \input{Enddokumentation/Loesungskonzept/Loesungskonzept}
     \input{Enddokumentation/Loesungskonzept/Funktionsbeschreibung}
     \input{Enddokumentation/Loesungskonzept/Geraeteuebersicht}
@@ -49,9 +53,9 @@
     \input{Enddokumentation/Loesungskonzept/Schwungraeder}
     \input{Enddokumentation/Loesungskonzept/Versorgungskonzept}
     \input{Enddokumentation/Loesungskonzept/Softwarearchitektur}
-    
-    
-    %Tests
+    %
+    % Tests
+    %
     \input{Enddokumentation/Tests/Tests}
     \input{Enddokumentation/Tests/ZylinderTest}
     \input{Enddokumentation/Tests/SchwngradTest}
@@ -60,28 +64,35 @@
     \input{Enddokumentation/Tests/BrushlessMotorTest}
     \input{Enddokumentation/Tests/AcrylglasTest}
     \newpage
-    
-    %Projektführung
+    %
+    % Projektführung
+    %
     \input{Enddokumentation/Projektplanung_Management/PlanungManagement}
     \input{Enddokumentation/Projektplanung_Management/Kosten}
     \input{Enddokumentation/Projektplanung_Management/Zeit}
-    
-    %Reflexion
+    %
+    % Reflexion
+    %
     \input{Enddokumentation/Schluss/Schluss}
     \input{Enddokumentation/Schluss/Rueckblick}
     \input{Enddokumentation/Schluss/Ausblick}
     \newpage
+    %
+    % Einfügen des Abbildungsverzeichnisses
+    %
     \listoffigures 
-    
+    %
+    % Einfügen des Quellenverzeichnisses mit einem anderen Namen
+    %
     \begin{flushleft}
         \renewcommand{\refname}{Literatur- und Quellenverzeichnis}
 %        \{\refname}{Quellenverzeichnis}
-        \bibliography{Enddokumentation/Elektronik/BLDC/BLDC_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
+        \bibliography{Enddokumentation/BLDC/BLDC_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
     \end{flushleft}
-    
+    %
     % Beginn des Anhangs
-    \appendix  
-    
+    %
+    \appendix      
 	\begin{appendix}
 		\clearpage
 		\pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
