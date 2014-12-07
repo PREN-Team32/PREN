@@ -2,7 +2,7 @@
 	% TODO Livio
 	
 	
-	\subsection{Korberkennung}
+	\paragraph{Korberkennung}
 	Im nachfolgenden Ablaufdiagramm ist die Funktionsweise des Systems zur Korberkennung dargestellt. Erwähnenswert hierbei ist vor allem, dass zur Identifikation des Korbes im Bild kein gegebenes Framework wie etwa OpenCV verwendet wird.
 	% Flowchart (Ablaufdiagramm) fehlt
 	Für die Bestimmung der Position des Korbes wurde ein Algorithmus entwickelt und in Java implementiert. Dieser bedient sich des Umstandes, dass der Korb deutlich dunkler als der Hintergrund ist. Um mit dem von der Kamera zuvor aufgenommenen Bild arbeiten zu können, müssen die Ränder abgeschnitten werden (vor allem links und rechts geht der Bildbereich über das Spielfeld hinaus, was das Resultat verfälschen könnte) Als zweiter Schritt wird über sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die Helligkeit bestimmt anhand einer vordefinierten Schwelle entschieden, ob es zum Hintergrund (heller) oder zum Korb (dunkel) gehört. Anschliessend wird der Schwerpunkt der dunklen Pixel bestimmt und anhand des gefundenen Schwerpunktes entweder von links oder von rechts her in einem bestimmten horizontalen Bereich (der Korb befindet sich immer auf der selben Höhe) über die Pixel iteriert um dabei eine feste Kontur zu finden. Diese feste Kontur wird dabei definiert durch eine bestimmte Anzahl weisse Pixel, auf welche wiederum eine Menge schwarzer Pixel folgen muss. Da dieser Prozess immer in derselben horizontalen Ebene stattfindet kann durch eine abschliessende Berechnung der Mittelpunkt des Korbes und der damit verbundene Winkel des Ballwerfers zum Korb trigonometrisch bestimmt werden.
