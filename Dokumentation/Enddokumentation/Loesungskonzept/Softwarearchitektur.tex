@@ -1,7 +1,7 @@
 \subsection{Software-Architektur}
 	\subsection{Systemübersicht}
 	Zur Übersicht über den erarbeiteten Lösungsansatz bietet sich die Darstellung durch ein Kontextdiagramm an. Darin zu erkennen sind die fünf Hauptkomponenten  DesktopViewer, CoreApp, Detector, MediaCommunication und ControllerCommunication. Weiter enthält das System mindestens drei Schnittstellen, einerseits die Bluetooth Schnittstelle zwischen Startgerät und Ballwerfer, des Weiteren die muss die Kommunikation mit Kamera und Controller gewährleistet sein. Die Schnittstelle zur Kamera sollte, sofern wie geplant ein Smartphone verwendet wird, bereits durch das entsprechende Betriebssystem gegeben sein, weshalb in diesem Dokument nicht weiter auf diese Schnittstelle eingegangen wird.
-	//Kontextdiagramm
+	% Kontextdiagramm fehlt noch
 	
 	\subsection{Komponenten-Spezifikation}
 		\subsection{DesktopViewer}
@@ -20,7 +20,7 @@
 		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI-Controller realisiert. Der vom Detektor berechnete Winkel wird hier übertragen um anschliessend Mechanisch umgesetzt zu werden und den Ballwerfer aufs Ziel auszurichten.
 		
 	\subsection{Schnittstellen-Spezifikation}
-		//Übersicht Schnittstellen
+		% Übersicht Schnittstellen fehlt
 		Als weiteres Hauptelement des entworfenen Systems werden im nachfolgenden Abschnitt die in der Grafik erkennbaren Schnittstellen (Bluetooth und Controller) deklariert.
 		
 		\subsection{Bluetooth}
@@ -31,5 +31,5 @@
 		Das Smartphone kommuniziert über den bereitgestellten Treiber von FTDI mit dem Controller, die verwendete Schnittstelle ist UART. Die Kommunikation ist soll bidirektional sein, kann also sowohl empfangen als auch senden. Der Vorteil einer solchen Verbindung ist das sie als COM-Schnittstelle angesteuert werden kann was relativ einfach zu implementieren ist. Die Verbindung ist ausfallsicher und einfach aufrechtzuerhalten.		
 		
 	\subsection{Funktionale Sicht}
-		//Sequenzidagramm
-		//TODO: Kurzer Text zum funktionalen Ablauf.
+		% Sequenzidagramm fehlt
+		% TODO: Kurzer Text zum funktionalen Ablauf.
