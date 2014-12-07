@@ -1,1 +1,35 @@
-\subsection{Softwarearchitektur}
+\subsection{Software-Architektur}
+	\subsection{Systemübersicht}
+	Zur Übersicht über den erarbeiteten Lösungsansatz bietet sich die Darstellung durch ein Kontextdiagramm an. Darin zu erkennen sind die fünf Hauptkomponenten  DesktopViewer, CoreApp, Detector, MediaCommunication und ControllerCommunication. Weiter enthält das System mindestens drei Schnittstellen, einerseits die Bluetooth Schnittstelle zwischen Startgerät und Ballwerfer, des Weiteren die muss die Kommunikation mit Kamera und Controller gewährleistet sein. Die Schnittstelle zur Kamera sollte, sofern wie geplant ein Smartphone verwendet wird, bereits durch das entsprechende Betriebssystem gegeben sein, weshalb in diesem Dokument nicht weiter auf diese Schnittstelle eingegangen wird.
+	//Kontextdiagramm
+	
+	\subsection{Komponenten-Spezifikation}
+		\subsection{DesktopViewer}
+		Über die Viewer-Komponente wird die Konfiguration der Applikation, sowie die Auslösung des Startsignals realisiert. Weiter soll es zu Testzwecken möglich sein, die Resultate der Korberkennung ebenfalls über den DesktopViewer zu betrachten.
+		
+		\subsection{CoreApp}
+		Als Kernbestandteil der Smartphone App umfasst die CoreApp-Komponente auf der einen Seite die Kommunikation mit der Viewer-Komponente, auf der anderen Seite wird hier der Ablauf der Kernfunktionen zur Objekterkennung koordiniert.
+		
+		\subsection{Detector}
+		Dem Detektor muss ein Bild übergeben werden, welches von diesem darauf ausgewertet wird. Dabei sucht der Detektor nach einem dunkeln Objekt im Bild und ist in der Lage, anhand der ermittelten Position den Winkel des Ballwerfers zum Korb bestimmen kann.
+		
+		\subsection{MediaCommunication}
+		In dieser Komponente ist die Kommunikation mit der Kamera des Smartphones umgesetzt. Hauptsächlich geht es darum, ein Foto aufzunehmen, welches wiederrum dem Detektor zur Winkelbestimmung übergeben wird.
+		
+		\subsection{ControllerCommunication}
+		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI-Controller realisiert. Der vom Detektor berechnete Winkel wird hier übertragen um anschliessend Mechanisch umgesetzt zu werden und den Ballwerfer aufs Ziel auszurichten.
+		
+	\subsection{Schnittstellen-Spezifikation}
+		//Übersicht Schnittstellen
+		Als weiteres Hauptelement des entworfenen Systems werden im nachfolgenden Abschnitt die in der Grafik erkennbaren Schnittstellen (Bluetooth und Controller) deklariert.
+		
+		\subsection{Bluetooth}
+		Die Kommunikation vom Startgerät (Notebook) zum Smartphone (Android Device auf dem Ballwerfer) für die Übermittlung des Startsignals findet mit Bluetooth statt. Die Bluetooth-Komponente auf dem Notebook startet nach Aktivierung ein ‚inquiry‘ (Erkundigung) nach verfügbaren Bluetooth-Geräten. Anschliessend wird eine Service-Anfrage (RFCOMM, eine COM-Schnittstelle) an ein gewünschtes Bluetooth-Gerät gestartet, bei positiver Rückmeldung werden die zwei Geräte gepaart. Eine uni- oder bidirektionale Kommunikation zwischen den Geräten kann nun jederzeit aufgebaut werden. Das eigentliche Startsignal wird ein primitiver Datentyp sein.
+		
+		\subsection{Controller}
+		Die Verbindung vom Android Smartphone zum FTDI Controller wird mit USB realisiert. 
+		Das Smartphone kommuniziert über den bereitgestellten Treiber von FTDI mit dem Controller, die verwendete Schnittstelle ist UART. Die Kommunikation ist soll bidirektional sein, kann also sowohl empfangen als auch senden. Der Vorteil einer solchen Verbindung ist das sie als COM-Schnittstelle angesteuert werden kann was relativ einfach zu implementieren ist. Die Verbindung ist ausfallsicher und einfach aufrechtzuerhalten.		
+		
+	\subsection{Funktionale Sicht}
+		//Sequenzidagramm
+		//TODO: Kurzer Text zum funktionalen Ablauf.
