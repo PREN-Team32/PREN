@@ -1,6 +1,8 @@
 *.aux
 *.log
+*.pdf
 Dokumentation/MS1/Meilenstein 1.synctex.gz
+*.pdf
 *.toc
 *.out
 *.gz
@@ -8,3 +10,4 @@ Dokumentation/MS1/Meilenstein 1.synctex.gz
 Dokumentation/Dokumentation.tps
 *.bbl
 *.blg
+*.pdf
