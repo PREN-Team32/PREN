@@ -45,9 +45,9 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.9\textwidth]{Enddokumentation/Loesungskonzept/Bilder/					Sequenzidagramm.jpg}
+		\includegraphics[width=0.9\textwidth]{Enddokumentation/CrashTestDummy.jpg}
 		\caption{Sequenzidagramm}		
-	\end{figure}\\
+	\end{figure}
 Ein User gibt den Startbefehl für den Roboter durch die Komponente desktopviewer, die auf einem Computer ausgeführt wird. Desktopviewer baut eine Bluetooth-Connection mit der Komponente Coreapp, welche auf dem Smartphone ausgeführt wird, und sendet anschliessend das Startsignal welches durch den User aufgerufen wird. \\
 Ab diesem Zeitpunkt läuft die Applikation völlig autonom. Die coreapp ruft als erstes die mediacommunication Komponente auf und schiesst ein Foto. Das Foto wird an die coreapp zurückgegeben.
 Die Komponente coreapp ruft die Komponente 	detektor auf und übergibt dieser das Foto, welche daraufhin den Winkel ausrechnet und diesen an coreapp übergibt.\\
