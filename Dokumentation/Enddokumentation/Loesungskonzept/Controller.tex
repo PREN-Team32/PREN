@@ -7,10 +7,4 @@
 		\label{fig:Blockschaltbild_Controller}
 	\end{wrapfigure}
 	Die Abbildung \ref{fig:Blockschaltbild_Controller} zeigt auf, wie die Controller-Hardware aufgebaut sein wird. Die BLDC- und Stepper-Ansteuerung wird auf separaten Boards realisiert, wobei die Stepper-Hardware durch die PREN-ET
-	entwickelt und in dieser Gruppe eingesetzt wird. Als Schnittstelle zwischen den Boards und dem Controller wird SPI eingesetzt, da ein Hauptchip der Stepper-Ansteuerung nur über SPI angesprochen werden kann. Die Kommunikation mit dem Master wir über UART stattfinden, das über den FTDI-Chip auf USB emuliert wird. Die Ansteuerung des DC-Motors wird mittels PWM und über einen Transistor realisiert. Die Abbildung \ref{fig:Schema_DC-Motor} zeigt, wie Ansteuerung des DC-Motors umgesetzt werden wird.
-	\begin{figure}[h!] %{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{Enddokumentation/Loesungskonzept/Bilder/SchemaDcMotor.png}
-		\caption{Schema der DC-Motoransteuerung}
-		\label{fig:Schema_DC-Motor}
-	\end{figure}
+	entwickelt und in dieser Gruppe eingesetzt wird. Als Schnittstelle zwischen den Boards und dem Controller wird SPI eingesetzt, da ein Hauptchip der Stepper-Ansteuerung nur über SPI angesprochen werden kann. Die Kommunikation mit dem Master wir über UART stattfinden, das über den FTDI-Chip auf USB emuliert wird. Die Ansteuerung des DC-Motors wird mittels PWM realisiert.
