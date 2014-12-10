@@ -4,13 +4,13 @@ Zur Ermittlung der Federkonstante k wurde der Ball mit einer Masse m beschwert, 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.4\textwidth]{Enddokumentation/Anhang/Bilder/KompressionBaelle.png}
+	\includegraphics[width=0.5\textwidth]{Enddokumentation/Anhang/Bilder/KompressionBaelle.png}
 	\caption{Prinzip der k-Bestimmung}
 	\label{fig:BallKomp}
 \end{figure}
 
 \begin{table}[h!]
-	\begin{tabular}{p{1.5cm}p{2cm}}
+	\begin{tabular}{p{1.5cm}p{1.7cm}}
 		Gewicht & Auslenkung\\
 		\hline
 		1kg & 1 mm\\
@@ -21,29 +21,123 @@ Zur Ermittlung der Federkonstante k wurde der Ball mit einer Masse m beschwert, 
 	\caption{Prinzip der k-Bestimmung}
 	\label{tab:BallKompErgebnis}
 \end{table}
+
 Da $x_1$ und $x_2$ in etwa gleich gross sind, kann von einer linearen Federkonstante ausgegangen werden. Damit kann die Kraft, die durch das Stauchen des Balles entsteht mit der Formel
 \begin{equation}  
- F_s=2\cdot k \cdot \Delta x 
- \end{equation}
-bestimmt werden. Die Federkonstante k beträgt $9.8\frac{N}{mm}$ Das entstehende Drehmoment, wird mit trigonometrischer Beziehung hergeleitet. 
+    F_s=2\cdot k \cdot \Delta x 
+\end{equation}
 
-\begin{equation}  
- 	M = R_S \cdot F_t
- \end{equation}
-\begin{equation}  
-	F_t = F_s \cdot \sin(\alpha)
-\end{equation}
-\begin{equation}  
-	F_s = 2\cdot k \cdot \Delta x 
-\end{equation}
+bestimmt werden. Die Federkonstante k beträgt $9.8\frac{N}{mm}$ Das entstehende Drehmoment, wird mit trigonometrischer Beziehung hergeleitet.
+\begin{align}  
+    \label{equ:Formel_M} %Muss hier sein, damit die Referenz zur ersten Formel zeigt.
+    M &= R_S \cdot F_t\\
+    F_t &= F_s \cdot \sin(\alpha)\\ 
+    F_s &= 2\cdot k \cdot \Delta x 
+\end{align}
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.4\textwidth]{Enddokumentation/Anhang/Bilder/PrinzipKompression.png}
 	\caption{Prinzip der Kompression}
 	\label{fig:PrinzipBallKomp}
 \end{figure}
-Da $\Delta x$ vom Winkel $\alpha$ abhängt, muss die folgende Abhängigkeit gelten:
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \includegraphics[scale=0.75]{Enddokumentation/Anhang/Bilder/GrafikKreisErkaerung.png}
+    \centering
+    \caption{keine Ahnung}
+    \label{abb:KreisErkaerung}
+\end{wrapfigure}
+Da $\Delta x$ vom Winkel $\alpha$ abhängt, siehe Abbildung \ref{abb:KreisErkaerung} muss die folgende Abhängigkeit gelten:
+\begin{equation}  
+	\alpha = R_s \cdot \frac{1}{\cos(\alpha)} \\ \lvert \\ b = a - R_s = R_s \left( \frac{1}{\cos(\alpha)}-1\right)   
+\end{equation}
 
 \begin{equation}  
-	\alpha = R_s \cdot \frac{1}{\cos(\alpha)} \\ b = a - R_s = R_s \left( \frac{1}{\cos(\alpha)}-1\right)   
+	\Delta x = b \cdot \cos(\alpha) = R_a \cdot \left[1 - \cos(\alpha)\right]
 \end{equation}
+
+Somit gilt:
+\begin{equation}  
+	\Delta x =  R_s \cdot \left[1 - \cos(\alpha)\right]
+	\label{equ:Formel_DeltaX}
+\end{equation}
+
+Fügt man nun die Formeln \ref{equ:Formel_M} bis \ref{equ:Formel_DeltaX} zusammen erhält man das Drehmoment in Abhängigkeit zum Winkel:
+\begin{equation}  
+    M = 2 \cdot R_s{^{2}} \cdot k \cdot \left[1 - \cos(\alpha)\right] \cdot \sin(\alpha)\\\lvert\\ \left[ |a| \leq \arccos \left(1-\frac{1}{R_s}\right)\right]
+\end{equation}
+Berechnet mit den Werten $R_s = 40 mm$, $k = 9.8 \frac{N}{mm}$, $L = 146 mm$ und $DBall = 68 mm$ ergibt sich der folgende Verlauf über den Winkel. Dabei ist ersichtlich, dass sich das Maximum jeweils beim Grenzwinkel liegt. Dort wird das Drehmoment bei 0 liegen, da keine Kraft angreift. Der Betrag des maximalen Drehmoments liegt bei $0.174 Nm$ und einem Winkel von $12.84^\circ$.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Enddokumentation/Anhang/Bilder/WeissNicht.png}
+	\caption{keine Ahnung}
+	\label{fig:keineAhnung}
+\end{figure}
+
+Die kurzzeitige Laständerung durch den Abwurf eines Balles kann aufgrund der Trägheit des Motors nicht ausgeglichen werden. Deshalb soll eine Energiebilanz Aufschlüsse über den Drehzahlverlust geben. Der Ball hat zwischen den Punkten 0 und 1 zwei verschiedene Energien. Eine potentielle sowie eine kinetische Energie. Zusätzlich besitzen die Schwungräder aufgrund ihrer Trägheit eine Rotationsenergie.
+\begin{align}
+    &\sum E_{pot} &+&& \sum E_{kin} &&+&& \sum E_{rot} &= 0 \\
+    & m_{ball} \cdot \left(h_1 - h_0\right) &+&&\frac{1}{2} \cdot \left( v_1{^{2}} - v_0{^{2}} \right) &&+&&\frac{1}{2} \cdot J \left( \omega_{1^{2}} - \omega_{0^{2}} \right) &= 0
+\end{align}
+
+Die Berechnung der Anfangsgeschwindigkeit des Balles ist von der Zuführgeschwindigkeit wie folgt abhängig:
+\begin{equation}
+    v_0 = v_{band} \cdot \cos(\beta)
+\end{equation}
+
+Die Endgeschwindigkeit kommt aufgrund des schiefen Wurfes zustande
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Enddokumentation/Anhang/Bilder/Ballnachfuehrung.png}
+	\caption{keine Ahnung}
+	\label{fig:Ballnachführung}
+\end{figure}
+
+Das Trägheitsmoment beträgt
+\begin{equation}
+    J = \sum_{i}^{N} m_ir_i{^{2}}
+\end{equation}
+
+Somit ist eine grosse Masse in weitem Abstand zur Achse anzustreben. Es wird das Trägheitsmoment eines Vollzylinders für die Berechnung verwendet. Dieser lautet:
+\begin{equation}
+    J = \frac{1}{2} m \cdot r^2
+\end{equation}
+
+Die Masse ist dabei 	
+\begin{equation}
+    m = \rho \cdot V \\\lvert\\ m = \rho \cdot d_{rad} \cdot \pi \cdot b_{rad}
+\end{equation}
+Das resultierende Trägheitsmoment beträgt $0.00018 kg m^2$\\
+\\
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \includegraphics[scale=0.75]{Enddokumentation/Anhang/Bilder/AbwurfBild.png}
+    \centering
+    \caption{keine Ahnung}
+    \label{abb:AbwurfBild}
+\end{wrapfigure}
+Zwischen der Abwurfgeschwindigkeit und der Winkelgeschwindigkeit gibt es eine Relation. Dabei wird angenommen, dass der Ball ohne Schlupf die Schwungräder durchläuft. Im Eintrittspunkt wird der Ball mit einem Sprung beschleunigt. Beim Winkel alpha=0 ist die Geschwindigkeit am höchsten. Danach wird der Ball wieder abgebremst.
+\begin{align}
+v_1 &= v_u \cdot \cos(\alpha)\\
+v_u &= 4\pi \cdot R_s \cdot n_1
+\end{align}
+
+Der Höhenunterschied $\delta H$ wird ausgedrückt durch:
+\begin{equation}
+    \Delta H = \frac{L \cdot \tan(\alpha)}{\sqrt{2}}
+\end{equation}
+
+Die Winkelgeschwindigkeiten werden durch die Drehzahl definiert:
+\begin{equation}
+    \omega = 2\pi \cdot n
+\end{equation}
+
+Nun kann die Energiegleichung aufgestellt werden:
+\begin{multline}
+    m_{Ball} \cdot g \cdot \frac{L \cdot \tan(\alpha)}{\sqrt{2}} + \frac{1}{2} \cdot m_{Ball} \cdot \left(\left[4\pi \cdot R_s \cdot n_1 \cdot \cos(\alpha)\right]^2 - \left[ v_{Band} \cdot \frac{1}{\sqrt{2}}\right]^2\right) +\\
+     \frac{1}{2} \cdot J \cdot \left(\left[2\pi \cdot n_1\right]^2 - \left[2\pi \cdot n_0\right]^2\right) = 0
+\end{multline}
+Berechnet mit den gegebenen Werten von: $mBall = 0.055 kg$, $g = 9.81\frac{N}{kg}$, $L = 0.146 m$, $R_s = 0.040 m$, $v_{Band} = 0 \frac{m}{s}$, $J = 0.00018 kgm^2$, $n_0 = 41\frac{U}{s}$, $a = 12.84^\cdot$ ergebt sich eine Drehzahl von $24.2 \frac{U}{s}$. Dies entspricht 58\% der Nenndrehzahl.\\
+\\
+Verdoppelt man nun das Trägheitsmoment J, so steigt die Nenndrehzahl auf $29.6 \frac{U}{s}$ an. Dies entspricht 71\% der Nenndrehzahl.
