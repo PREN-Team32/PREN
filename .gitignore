@@ -1,16 +1,10 @@
 *.aux
 *.log
-*.pdf
-Dokumentation/MS1/Meilenstein 1.synctex.gz
 *.toc
 *.out
 *.gz
 *.lof
-*.pdf
-Dokumentation/Dokumentation.tps
+*.tps
 *.bbl
 *.blg
-*.pdf
-*.pdf
-Dokumentation/Dokumentation.pdf
 Dokumentation/Dokumentation.pdf
