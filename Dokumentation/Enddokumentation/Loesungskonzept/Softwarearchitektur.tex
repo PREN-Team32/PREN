@@ -1,7 +1,7 @@
 \subsection{Software-Architektur}
 	\subsubsection{Systemübersicht}
-	Zur Übersicht über den erarbeiteten Lösungsansatz bietet sich die Darstellung durch ein Kontextdiagramm an. Darin zu erkennen sind die fünf Hauptkomponenten  DesktopViewer, CoreApp, Detector, MediaCommunication und ControllerCommunication. Weiter enthält das System mindestens drei Schnittstellen, einerseits die Bluetooth Schnittstelle zwischen Startgerät und Ballwerfer, des Weiteren die muss die Kommunikation mit Kamera und Controller gewährleistet sein. Die Schnittstelle zur Kamera sollte, sofern wie geplant ein Smartphone verwendet wird, bereits durch das entsprechende Betriebssystem gegeben sein, weshalb in diesem Dokument nicht weiter auf diese Schnittstelle eingegangen wird.
-  fehlt noch
+	Zur Übersicht über den erarbeiteten Lösungsansatz bietet sich die Darstellung durch ein Kontextdiagramm an. Darin zu erkennen sind die fünf Hauptkomponenten  DesktopViewer, CoreApp, Detector, MediaCommunication und ControllerCommunication. Weiter enthält das System mindestens drei Schnittstellen, einerseits die Bluetooth Schnittstelle zwischen Startgerät und Ballwerfer, des weiteren muss die Kommunikation mit Kamera und Controller gewährleistet sein.\\ 
+	Die Schnittstelle zur Kamera sollte, wenn wie geplant ein Smartphone verwendet wird, bereits durch das entsprechende Betriebssystem gegeben sein, weshalb in diesem Dokument nicht weiter auf diese Schnittstelle eingegangen wird. 
 \begin{figure}[h!]
 		\centering
 		\includegraphics[width=0.9\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Kontextdiagramm_v2.jpg}
@@ -11,19 +11,20 @@
 
 	\subsubsection{Komponenten-Spezifikation}
 		\paragraph{DesktopViewer\\}
-		Über die Viewer-Komponente wird die Konfiguration der Applikation, sowie die Auslösung des Startsignals realisiert. Weiter soll es zu Testzwecken möglich sein, die Resultate der Korberkennung ebenfalls über den DesktopViewer zu betrachten.
+		Über die Viewer-Komponente wird die Konfiguration der Applikation, sowie die Auslösung des Startsignals realisiert. Optional soll es zu Testzwecken möglich sein, die Resultate der Korberkennung ebenfalls über den DesktopViewer zu betrachten.
 		
 		\paragraph{CoreApp\\}
-		Als Kernbestandteil der Smartphone App umfasst die CoreApp-Komponente auf der einen Seite die Kommunikation mit der Viewer-Komponente, auf der anderen Seite wird hier der Ablauf der Kernfunktionen zur Objekterkennung koordiniert.
+		Als Kernbestandteil der Smartphone App umfasst die CoreApp-Komponente auf der einen Seite die Kommunikation mit der Viewer-Komponente, auf der anderen Seite wird hier der Ablauf der Kernfunktionen zur Objekterkennung koordiniert.		
+		
+		\paragraph{MediaCommunication\\}
+		In dieser Komponente ist die Kommunikation mit der Kamera des Smartphones und die Wiedergabe des Endsignals zuständig. MediaCommunication nimmt ein Foto auf und stellt dieses für die Winkelberechnung bereit, auf ein eintreffendes Endsignal wird ein Akustisches Signal ausgegeben was signalisiert das alle Bälle die Maschine verlassen haben.
 		
 		\paragraph{Detector\\}
 		Dem Detektor muss ein Bild übergeben werden, welches von diesem darauf ausgewertet wird. Dabei sucht der Detektor nach einem dunkeln Objekt im Bild und ist in der Lage, anhand der ermittelten Position den Winkel des Ballwerfers zum Korb bestimmen kann.
 		
-		\paragraph{MediaCommunication\\}
-		In dieser Komponente ist die Kommunikation mit der Kamera des Smartphones umgesetzt. Hauptsächlich geht es darum, ein Foto aufzunehmen, welches wiederrum dem Detektor zur Winkelbestimmung übergeben wird.
-		
+
 		\paragraph{ControllerCommunication\\}
-		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI-Controller realisiert. Der vom Detektor berechnete Winkel wird hier übertragen um anschliessend Mechanisch umgesetzt zu werden und den Ballwerfer aufs Ziel auszurichten.
+		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI-Controller realisiert. Der vom Detektor berechnete Winkel wird hier an den FTDI-Controller übertragen. Anschliessend wartet die Komponente bis der Controller ein Endsignal zurückgibt welches das Ende des Ballwurfs signalisiert.
 		
 	\subsubsection{Schnittstellen-Spezifikation}
 		% Übersicht Schnittstellen fehlt Schnittstellen
@@ -39,7 +40,7 @@
 		
 		\paragraph{Controller\\}
 		Die Verbindung vom Android Smartphone zum FTDI Controller wird mit USB realisiert. 
-		Das Smartphone kommuniziert über den bereitgestellten Treiber von FTDI mit dem Controller, die verwendete Schnittstelle ist UART. Die Kommunikation ist soll bidirektional sein, kann also sowohl empfangen als auch senden. Der Vorteil einer solchen Verbindung ist das sie als COM-Schnittstelle angesteuert werden kann was relativ einfach zu implementieren ist. Die Verbindung ist ausfallsicher und einfach aufrechtzuerhalten.		
+		Das Smartphone kommuniziert über den bereitgestellten Treiber von FTDI mit dem Controller, die verwendete Schnittstelle ist UART. Die Kommunikation soll bidirektional sein, kann sowohl empfangen als auch senden. Der Vorteil einer solchen Verbindung ist, dass sie als COM-Schnittstelle angesteuert werden kann was relativ einfach zu implementieren ist. Die Verbindung ist ausfallsicher und einfach aufrechtzuerhalten.		
 		
 	\subsubsection{Funktionale Sicht}
 	
@@ -48,10 +49,9 @@
 		\includegraphics[width=0.9\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Sequenzdiagramm.jpg}
 		\caption{Sequenzidagramm}		
 	\end{figure}
-Ein User gibt den Startbefehl für den Roboter durch die Komponente desktopviewer, die auf einem Computer ausgeführt wird. Desktopviewer baut eine Bluetooth-Connection mit der Komponente Coreapp, welche auf dem Smartphone ausgeführt wird, und sendet anschliessend das Startsignal welches durch den User aufgerufen wird. \\
-Ab diesem Zeitpunkt läuft die Applikation völlig autonom. Die coreapp ruft als erstes die mediacommunication Komponente auf und schiesst ein Foto. Das Foto wird an die coreapp zurückgegeben.
-Die Komponente coreapp ruft die Komponente 	detektor auf und übergibt dieser das Foto, welche daraufhin den Winkel ausrechnet und diesen an coreapp übergibt.\\
-Der berechnete Winkel wird an die Komponente controllercommunication übergeben. Die Komponente baut die Verbindung zum FTDI-Controller auf und übergibt diesem den Winkelwert, danach wartet die Komponente bis der FTDI-Controller das Ende des Ballwurfes zurückgibt. Controllercommuncation übergibt an die Coreapp die Meldung das der Roboter fertig ist. \\
+Ein User gibt den Startbefehl für den Roboter durch die Komponente desktopviewer, die auf einem Computer(Laptop) ausgeführt wird. Desktopviewer baut eine Bluetooth-Connection mit der Komponente Coreapp auf, welche auf dem Smartphone ausgeführt wird, und sendet anschliessend das Startsignal welches durch den User ausgelöst wird. \\
+Ab diesem Zeitpunkt läuft die Applikation völlig autonom. Die coreapp ruft als erstes die mediacommunication Komponente auf und schiesst ein Foto. Coreapp ruft die Komponente 	detektor auf und übergibt dieser das Foto, welche daraufhin den Winkel ausrechnet.\\
+Der berechnete Winkel wird an die Komponente controllercommunication übergeben. Die Komponente baut die Verbindung zum FTDI-Controller auf und übergibt diesem den Winkelwert, danach wartet die Komponente bis der FTDI-Controller das Ende des Ballwurfes zurückgibt. Die Komponente controllercommuncation übergibt an die Coreapp die Meldung das der Roboter fertig ist. \\
 Coreapp ruft die medacommunication Komponente auf welche das Programmende signalisiert.
 		
 		
