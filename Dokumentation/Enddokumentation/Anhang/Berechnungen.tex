@@ -5,7 +5,7 @@ beschwert, und die Verschiebung x gemessen.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.3\textwidth]{Enddokumentation/Anhang/Bilder/KompressionBaelle.png}
+	\includegraphics[width=0.6\textwidth]{Enddokumentation/Anhang/Bilder/KompressionBaelle.png}
 	\caption{Prinzip der k-Bestimmung}
 	\label{fig:BallKomp}
 \end{figure}
@@ -80,7 +80,8 @@ da keine Kraft angreift. Der Betrag des maximalen Drehmoments liegt bei $0.174 N
 Winkel von $12.84^\circ$.
 
 \begin{figure}[h!]
-\centering	\includegraphics[width=0.3\textwidth]{Enddokumentation/Anhang/Bilder/WeissNicht.png}
+	\centering
+	\includegraphics[width=0.3\textwidth]{Enddokumentation/Anhang/Bilder/WeissNicht.png}
 	\caption{keine Ahnung}
 	\label{fig:keineAhnung}
 \end{figure}
@@ -90,14 +91,14 @@ Drehzahlverlust geben. Der Ball hat zwischen den Punkten 0 und 1 zwei verschiede
 Eine potentielle sowie eine kinetische Energie. Zusätzlich besitzen die Schwungräder
 aufgrund ihrer Trägheit eine Rotationsenergie.
 \begin{align}
- &\sum E_{pot} &+&& \sum E_{kin} &&+&& \sum E_{rot} &= 0 \\
- & m_{ball} \cdot \left(h_1 - h_0\right) &+&&\frac{1}{2} \cdot \left( v_1{^{2}} - v_0{^{2}} \right) &&+&&\frac{1}{2} \cdot J \left( \omega_1{^{2}} - \omega_0{^{2}} \right) &= 0
+ 	&\sum E_{pot} &+&& \sum E_{kin} &&+&& \sum E_{rot} &= 0 \\
+ 	& m_{ball} \cdot \left(h_1 - h_0\right) &+&&\frac{1}{2} \cdot \left( v_1{^{2}} - v_0{^{2}} \right) &&+&&\frac{1}{2} \cdot J \left( \omega_1{^{2}} - \omega_0{^{2}} \right) &= 0
 \end{align}
 
 Die Berechnung der Anfangsgeschwindigkeit des Balles ist von der Zuführgeschwindigkeit wie
 folgt abhängig:
 \begin{equation}
- v_0 = v_{band} \cdot \cos(\beta)
+ 	v_0 = v_{band} \cdot \cos(\beta)
 \end{equation}
 
 Die Endgeschwindigkeit kommt aufgrund des schiefen Wurfes zustande
@@ -110,49 +111,49 @@ Die Endgeschwindigkeit kommt aufgrund des schiefen Wurfes zustande
 
 Das Trägheitsmoment beträgt
 \begin{equation}
- J = \sum_{i}^{N} m_ir_i{^{2}}
+ 	J = \sum_{i}^{N} m_ir_i{^{2}}
 \end{equation}
 
 Somit ist eine grosse Masse in weitem Abstand zur Achse anzustreben. Es wird das Trägheitsmoment eines Vollzylinders für die Berechnung verwendet. Dieser lautet:
 \begin{equation}
- J = \frac{1}{2} m \cdot r^2
+ 	J = \frac{1}{2} m \cdot r^2
 \end{equation}
 
 Die Masse ist dabei 	
 \begin{equation}
- m = \rho \cdot V \\\lvert\\ m = \rho \cdot d_{rad} \cdot \pi \cdot b_{rad}
+	m = \rho \cdot V \\\lvert\\ m = \rho \cdot d_{rad} \cdot \pi \cdot b_{rad}
 \end{equation}
 Das resultierende Trägheitsmoment beträgt $0.00018 kg m^2$\\
 \\
 \begin{wrapfigure}{r}{0.3\textwidth}
- \includegraphics[scale=0.75]{Enddokumentation/Anhang/Bilder/AbwurfBild.png}
- \centering
- \caption{keine Ahnung}
- \label{abb:AbwurfBild}
+	 \includegraphics[scale=0.75]{Enddokumentation/Anhang/Bilder/AbwurfBild.png}
+	 \centering
+	 \caption{keine Ahnung}
+	 \label{abb:AbwurfBild}
 \end{wrapfigure}
 Zwischen der Abwurfgeschwindigkeit und der Winkelgeschwindigkeit gibt es eine Relation.
 Dabei wird angenommen, dass der Ball ohne Schlupf die Schwungräder durchläuft. Im
 Eintrittspunkt wird der Ball mit einem Sprung beschleunigt. Beim Winkel alpha=0 ist die
 Geschwindigkeit am höchsten. Danach wird der Ball wieder abgebremst.
 \begin{align}
-v_1 &= v_u \cdot \cos(\alpha)\\
-v_u &= 4\pi \cdot R_s \cdot n_1
+	v_1 &= v_u \cdot \cos(\alpha)\\
+	v_u &= 4\pi \cdot R_s \cdot n_1
 \end{align}
 
 Der Höhenunterschied $\delta H$ wird ausgedrückt durch:
 \begin{equation}
- \Delta H = \frac{L \cdot \tan(\alpha)}{\sqrt{2}}
+	\Delta H = \frac{L \cdot \tan(\alpha)}{\sqrt{2}}
 \end{equation}
 
 Die Winkelgeschwindigkeiten werden durch die Drehzahl definiert:
 \begin{equation}
- \omega = 2\pi \cdot n
+	\omega = 2\pi \cdot n
 \end{equation}
 
 Nun kann die Energiegleichung aufgestellt werden:
 \begin{multline}
- m_{Ball} \cdot g \cdot \frac{L \cdot \tan(\alpha)}{\sqrt{2}} + \frac{1}{2} \cdot m_{Ball} \cdot \left(\left[4\pi \cdot R_s \cdot n_1 \cdot \cos(\alpha)\right]^2 - \left[ v_{Band} \cdot \frac{1}{\sqrt{2}}\right]^2\right) +\\
-  \frac{1}{2} \cdot J \cdot \left(\left[2\pi \cdot n_1\right]^2 - \left[2\pi \cdot n_0\right]^2\right) = 0
+	m_{Ball} \cdot g \cdot \frac{L \cdot \tan(\alpha)}{\sqrt{2}} + \frac{1}{2} \cdot m_{Ball} \cdot \left(\left[4\pi \cdot R_s \cdot n_1 \cdot \cos(\alpha)\right]^2 - \left[ v_{Band} \cdot \frac{1}{\sqrt{2}}\right]^2\right) +\\
+	\frac{1}{2} \cdot J \cdot \left(\left[2\pi \cdot n_1\right]^2 - \left[2\pi \cdot n_0\right]^2\right) = 0
 \end{multline}
 Berechnet mit den gegebenen Werten von: $mBall = 0.055 kg$, $g = 9.81\frac{N}{kg}$, $L = 0.146 m$, $R_s = 0.040 m$, $v_{Band} = 0 \frac{m}{s}$, $J = 0.00018 kgm^2$, $n_0 = 41\frac{U}{s}$, $a = 12.84^\cdot$ ergebt sich eine Drehzahl von $24.2 \frac{U}{s}$. Dies entspricht 58\% der Nenndrehzahl.\\
 \\
@@ -162,13 +163,40 @@ an. Dies entspricht 71\% der Nenndrehzahl.\\
 Als nächstes wird die Zeit für das Beschleunigen der Räder von der abgebremsten Drehzahl
 wieder auf die Nenndrehzahl berechnet.
 \begin{align}
- M &= \alpha \cdot J\\
- n_0 &= n_1 + \alpha \cdot t
+	M &= \alpha \cdot J\\
+	n_0 &= n_1 + \alpha \cdot t
 \end{align}
 Somit gilt:
 \begin{equation}
- t = \frac{n_0 - n_1}{\alpha} = \frac{\Delta n \cdot J}{M}
+	t = \frac{n_0 - n_1}{\alpha} = \frac{\Delta n \cdot J}{M}
 \end{equation}
 Wir setzen nun vereinfacht, für das Trägheitsmoment, dieses des Schwungrades ein. Das Moment
 des Motors soll $0.5 Nm$ betragen. Somit resultiert ein t von $6 ms$. 
+
+Um die Abwurfgeschwindigkeit des Balles aus dem Wurfgerät zu bestimmen, wurde der schiefe
+Wurf ohne Luftwiderstand berechnet, da für diese Anwendung die Abweichung durch den
+Luftwiderstand minimal ist.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Enddokumentation/Anhang/Bilder/Schiefer_Wurf2.jpg}
+	\caption{Wurfparabel}
+	\label{fig:Wurfparabel}
+\end{figure}
+\begin{align}
+	x_{(t)} &= v_0 \cdot \cos(\alpha_0)\\
+	y_{(t)} &= y_0 + v_0 \cdot t \cdot \sin(\alpha_0) - \frac{1}{2} \cdot g \cdot t^2
+\end{align}
+
+Mit den definierten Werten $x_1 = 1.8 m$, $y_0 = 0.125 m$, $y_1 = 0.4 m$ und 
+$g = 9.81 \frac{m}{s}$ ergibt sich eine Zeitdauer von $t = 0.56 s$ und eine
+Abwurfgeschwindigkeit von $4.56 \frac{m}{s}$ Die nachfolgende Abbildung
+\ref{fig:Wurfparabel1} zeigt die resultierende Wurfparabel.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{Enddokumentation/Anhang/Bilder/Schiefer_Wurf.jpg}
+	\caption{Wurfparabel}
+	\label{fig:Wurfparabel1}
+\end{figure}
+
+
 
