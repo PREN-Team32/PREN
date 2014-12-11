@@ -5,8 +5,8 @@
 %                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
 %
 %\usepackage{Common/Layout}
-\newcommand{\BrushlessPath}{Enddokumentation/ET_Gruppe}
-\input{\BrushlessPath/booleans}
+\newcommand{\EtPath}{Enddokumentation/ET_Gruppe/BLDC}
+\input{Enddokumentation/ET_Gruppe/common/booleans}
 \setboolean{EMBED}{true}
 \newcommand{\myTitel}{Dokumentation}
 \newcommand{\BLDCTeams}{T27 und T32}
@@ -55,7 +55,11 @@
     \input{Enddokumentation/Loesungskonzept/Schwungraeder}
     \input{Enddokumentation/Loesungskonzept/Antriebsstrang}
     \input{Enddokumentation/Loesungskonzept/Versorgungskonzept}
-    \input{\BrushlessPath/Hardwarezusammenarbeit}
+    \input{Enddokumentation/ET_Gruppe/common/Hardwarezusammenarbeit}
+    
+    \input{\EtPath/Ansteuerung}
+    \input{\EtPath/fallback}
+    \input{\EtPath/encoder}
     \input{Enddokumentation/Loesungskonzept/Softwarearchitektur}
 %    %
     % Tests
@@ -94,7 +98,7 @@
     \begin{flushleft}
         \renewcommand{\refname}{Literatur- und Quellenverzeichnis}
 %        \{\refname}{Quellenverzeichnis}
-        \bibliography{Enddokumentation/ET_Gruppe/BLDC_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
+        \bibliography{Enddokumentation/ET_Gruppe/common/ET-Gruppe_Source,Quellen/Quellen}{} %!!! Kein Leerzeichen nach dem , !!!!
     \end{flushleft}
     %
     % Beginn des Anhangs

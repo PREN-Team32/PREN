@@ -1,8 +1,8 @@
-﻿\ifSTANDALONE
+\ifSTANDALONE
 \section{Brushless Motoransteuerung}
 \fi
 \ifEMBED
-\subsection{Brushless Motoransteuerung}
+\subsubsection{Brushless Motoransteuerung}
 \fi
 
 \ifEMBED
@@ -13,28 +13,28 @@
     \subsection{Theorie der Ansteuerung}
     \fi
     \ifEMBED
-    \subsubsection{Theorie der Ansteuerung}
+    \paragraph{Theorie der Ansteuerung\\}
     \fi
     \ifEMBED
         \begin{wrapfigure}{r}{0.50\textwidth}
-           	\includegraphics[scale=0.45]{\BrushlessPath/Bilder/ZeitlicheHallSensorAnsteuerung.jpg}
-           	\caption[Zeitliche Darstellung der Ansteuerung mit 
-                Hall-Sensoren]{Zeitliche Darstellung der Ansteuerung mit 
-                Hall-Sensoren \cite{AppNote:BrushlessuC}}
+           	\includegraphics[scale=0.45]{\EtPath/Bilder/ZeitlicheHallSensorAnsteuerung.jpg}
+           	\caption[Zeitliche Darstellung der Ansteuerung mit Hall-Sensoren]
+           	{Zeitliche Darstellung der Ansteuerung mit Hall-Sensoren \cite{AppNote:BrushlessuC}}
            	\centering
             \label{abb:ZeitlicheAnsteuerungBrushlessMotor}
         \end{wrapfigure}
     \fi
-        Brushless-Motoren (BLDC-Motoren) sind Synchron-Drehstrom-Motoren. Das bedeutet, sie 
-        werden mittels eines kontinuierlichen magnetischen Drehfeldes in Bewegung gesetzt. 
-        Dabei ist darauf zu achten, dass der Läufer dem Drehfeld synchron 
-        folgen kann, daher auch die Namensbezeichnung des Motors. Falls der Läufer dem Drehfeld nicht folgen kann, wird keine Spannung 	vom Rotor in die         Statorwicklungen induziert, die der Erregerspannung entgegenwirkt. 
-        Daraus folgt, dass ein immenser Strom fliesst, der nur von der 
-        Wicklungsimpedanz des Motors begrenzt wird.\\
+        Brushless-Motoren (BLDC-Motoren) sind Synchron-Drehstrom-Motoren. Das bedeutet, sie
+        werden mittels eines kontinuierlichen magnetischen Drehfeldes in Bewegung gesetzt.
+        Dabei ist darauf zu achten, dass der Läufer dem Drehfeld synchron folgen kann,
+        daher auch die Namensbezeichnung des Motors. Falls der Läufer dem Drehfeld nicht
+        folgen kann, wird keine Spannung vom Rotor in die Statorwicklungen induziert, die
+        der Erregerspannung entgegenwirkt. Daraus folgt, dass ein immenser Strom fliesst, 
+        der nur von der Wicklungsimpedanz des Motors begrenzt wird.\\
         \ifSTANDALONE
            \begin{figure}[h!]
                \centering
-               \includegraphics[scale=0.45]{\BrushlessPath/Bilder/ZeitlicheHallSensorAnsteuerung.jpg}
+               \includegraphics[scale=0.45]{\EtPath/Bilder/ZeitlicheHallSensorAnsteuerung.jpg}
                \caption[Zeitliche Darstellung der Ansteuerung mit 
                    Hall-Sensoren]{Zeitliche Darstellung der Ansteuerung mit 
                    Hall-Sensoren \cite{AppNote:BrushlessuC}}
@@ -74,12 +74,12 @@
     \subsection{Neuer Ansatz}
     \fi
     \ifEMBED
-    \subsubsection{Neuer Ansatz}
+    \paragraph{Neuer Ansatz\\}
     \fi
 
         \ifEMBED
         \begin{wrapfigure}{r}{0.40\textwidth}
-            \includegraphics[scale=0.46]{\BrushlessPath/Bilder/PrinzipDerRekonstruktion.png}
+            \includegraphics[scale=0.46]{\EtPath/Bilder/PrinzipDerRekonstruktion.png}
             \centering
             \caption[Schema des Rekonstruktionsprinzip]{Schema des Rekonstruktionsprinzip \cite{HSLU:Pluess}}
             \label{abb:PrinzipRekonstruktion}
@@ -94,7 +94,7 @@
         \ifSTANDALONE
 	\begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.46]{\BrushlessPath/Bilder/PrinzipDerRekonstruktion.png}
+            \includegraphics[scale=0.46]{\EtPath/Bilder/PrinzipDerRekonstruktion.png}
            	\caption{Schema des Rekonstruktionsprinzip \protect\cite{HSLU:Pluess}}
             \label{abb:PrinzipRekonstruktion}
         \end{figure}
