@@ -10,20 +10,20 @@
 
 
 	\subsubsection{Komponenten-Spezifikation}
-		\paragraph{DesktopViewer\\}
+		\paragraph{DesktopViewer}$~~$\vspace{2mm}\\
 		Über die Viewer-Komponente wird die Konfiguration der Applikation, sowie die Auslösung des Startsignals realisiert. Optional soll es zu Testzwecken möglich sein, die Resultate der Korberkennung ebenfalls über den DesktopViewer zu betrachten.
 		
-		\paragraph{CoreApp\\}
+		\paragraph{CoreApp}$~~$\vspace{2mm}\\
 		Als Kernbestandteil der Smartphone App umfasst die CoreApp-Komponente auf der einen Seite die Kommunikation mit der Viewer-Komponente, auf der anderen Seite wird hier der Ablauf der Kernfunktionen zur Objekterkennung koordiniert.		
 		
-		\paragraph{MediaCommunication\\}
+		\paragraph{MediaCommunication}$~~$\vspace{2mm}\\
 		In dieser Komponente ist die Kommunikation mit der Kamera des Smartphones und die Wiedergabe des Endsignals zuständig. MediaCommunication nimmt ein Foto auf und stellt dieses für die Winkelberechnung bereit, auf ein eintreffendes Endsignal wird ein Akustisches Signal ausgegeben was signalisiert das alle Bälle die Maschine verlassen haben.
 		
-		\paragraph{Detector\\}
+		\paragraph{Detector}$~~$\vspace{2mm}\\
 		Dem Detektor muss ein Bild übergeben werden, welches von diesem darauf ausgewertet wird. Dabei sucht der Detektor nach einem dunkeln Objekt im Bild und ist in der Lage, anhand der ermittelten Position den Winkel des Ballwerfers zum Korb bestimmen kann.
 		
 
-		\paragraph{ControllerCommunication\\}
+		\paragraph{ControllerCommunication}$~~$\vspace{2mm}\\
 		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI-Controller realisiert. Der vom Detektor berechnete Winkel wird hier an den FTDI-Controller übertragen. Anschliessend wartet die Komponente bis der Controller ein Endsignal zurückgibt welches das Ende des Ballwurfs signalisiert.
 		
 	\subsubsection{Schnittstellen-Spezifikation}
@@ -35,10 +35,10 @@
 		\end{figure}
 		Als weiteres Hauptelement des entworfenen Systems werden im nachfolgenden Abschnitt die in der Grafik erkennbaren Schnittstellen (Bluetooth und Controller) deklariert.
 		
-		\paragraph{Bluetooth\\}
+		\paragraph{Bluetooth}$~~$\vspace{2mm}\\
 		Die Kommunikation vom Startgerät (Notebook) zum Smartphone (Android Device auf dem Ballwerfer) für die Übermittlung des Startsignals findet mit Bluetooth statt. Die Bluetooth-Komponente auf dem Notebook startet nach Aktivierung ein ‚inquiry‘ (Erkundigung) nach verfügbaren Bluetooth-Geräten. Anschliessend wird eine Service-Anfrage (RFCOMM, eine COM-Schnittstelle) an ein gewünschtes Bluetooth-Gerät gestartet, bei positiver Rückmeldung werden die zwei Geräte gepaart. Eine uni- oder bidirektionale Kommunikation zwischen den Geräten kann nun jederzeit aufgebaut werden. Das eigentliche Startsignal wird ein primitiver Datentyp sein.
 		
-		\paragraph{Controller\\}
+		\paragraph{Controller}$~~$\vspace{2mm}\\
 		Die Verbindung vom Android Smartphone zum FTDI Controller wird mit USB realisiert. 
 		Das Smartphone kommuniziert über den bereitgestellten Treiber von FTDI mit dem Controller, die verwendete Schnittstelle ist UART. Die Kommunikation soll bidirektional sein, kann sowohl empfangen als auch senden. Der Vorteil einer solchen Verbindung ist, dass sie als COM-Schnittstelle angesteuert werden kann was relativ einfach zu implementieren ist. Die Verbindung ist ausfallsicher und einfach aufrechtzuerhalten.		
 		
