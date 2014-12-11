@@ -1,6 +1,7 @@
 \subsection{Berechnung}
-Um einen Ball durch die Schwingräder mit einem gewissen Anpressdruck zu führen, wird ein Drehmoment benötigt. Dazu betrachten wir den Tennisball als eine Feder mit der Federkonstante k.
-Zur Ermittlung der Federkonstante k wurde der Ball mit einer Masse m beschwert, und die Verschiebung x gemessen.
+Um einen Ball durch die Schwingräder mit einem gewissen Anpressdruck zu führen, wird ein
+Drehmoment benötigt. Dazu betrachten wir den Tennisball als eine Feder mit der Federkonstante k. Zur Ermittlung der Federkonstante k wurde der Ball mit einer Masse m
+beschwert, und die Verschiebung x gemessen.
 
 \begin{figure}[h!]
 	\centering
@@ -22,13 +23,16 @@ Zur Ermittlung der Federkonstante k wurde der Ball mit einer Masse m beschwert, 
 	\label{tab:BallKompErgebnis}
 \end{table}
 
-Da $x_1$ und $x_2$ in etwa gleich gross sind, kann von einer linearen Federkonstante ausgegangen werden. Damit kann die Kraft, die durch das Stauchen des Balles entsteht mit der Formel
+Da $x_1$ und $x_2$ in etwa gleich gross sind, kann von einer linearen Federkonstante
+ausgegangen werden. Damit kann die Kraft, die durch das Stauchen des Balles entsteht mit der
+Formel
 
 \begin{equation}  
     F_s=2\cdot k \cdot \Delta x 
 \end{equation}
 
-bestimmt werden. Die Federkonstante k beträgt $9.8\frac{N}{mm}$ Das entstehende Drehmoment, wird mit trigonometrischer Beziehung hergeleitet.
+bestimmt werden. Die Federkonstante k beträgt $9.8\frac{N}{mm}$ Das entstehende Drehmoment,
+wird mit trigonometrischer Beziehung hergeleitet.
 \begin{align}  
     \label{equ:Formel_M} %Muss hier sein, damit die Referenz zur ersten Formel zeigt.
     M &= R_S \cdot F_t\\
@@ -49,7 +53,8 @@ bestimmt werden. Die Federkonstante k beträgt $9.8\frac{N}{mm}$ Das entstehende
     \caption{keine Ahnung}
     \label{abb:KreisErkaerung}
 \end{wrapfigure}
-Da $\Delta x$ vom Winkel $\alpha$ abhängt, siehe Abbildung \ref{abb:KreisErkaerung} muss die folgende Abhängigkeit gelten:
+Da $\Delta x$ vom Winkel $\alpha$ abhängt, siehe Abbildung \ref{abb:KreisErkaerung} muss die
+folgende Abhängigkeit gelten:
 \begin{equation}  
 	\alpha = R_s \cdot \frac{1}{\cos(\alpha)} \\ \lvert \\ b = a - R_s = R_s \left( \frac{1}{\cos(\alpha)}-1\right)   
 \end{equation}
@@ -63,23 +68,34 @@ Somit gilt:
 	\label{equ:Formel_DeltaX}
 \end{equation}
 
-Fügt man nun die Formeln \ref{equ:Formel_M} bis \ref{equ:Formel_DeltaX} zusammen erhält man das Drehmoment in Abhängigkeit zum Winkel:
+Fügt man nun die Formeln \ref{equ:Formel_M} bis \ref{equ:Formel_DeltaX} zusammen erhält man
+das Drehmoment in Abhängigkeit zum Winkel:
 \begin{equation}  
     M = 2 \cdot R_s{^{2}} \cdot k \cdot \left[1 - \cos(\alpha)\right] \cdot \sin(\alpha)\\\lvert\\ \left[ |a| \leq \arccos \left(1-\frac{1}{R_s}\right)\right]
 \end{equation}
-Berechnet mit den Werten $R_s = 40 mm$, $k = 9.8 \frac{N}{mm}$, $L = 146 mm$ und $DBall = 68 mm$ ergibt sich der folgende Verlauf über den Winkel. Dabei ist ersichtlich, dass sich das Maximum jeweils beim Grenzwinkel liegt. Dort wird das Drehmoment bei 0 liegen, da keine Kraft angreift. Der Betrag des maximalen Drehmoments liegt bei $0.174 Nm$ und einem Winkel von $12.84^\circ$.
+Berechnet mit den Werten $R_s = 40 mm$, $k = 9.8 \frac{N}{mm}$, $L = 146 mm$ und
+$DBall = 68 mm$ ergibt sich der folgende Verlauf über den Winkel. Dabei ist ersichtlich,
+dass sich das Maximum jeweils beim Grenzwinkel liegt. Dort wird das Drehmoment bei 0 liegen,
+da keine Kraft angreift. Der Betrag des maximalen Drehmoments liegt bei $0.174 Nm$ und einem
+Winkel von $12.84^\circ$.
 
 \begin{figure}[h!]
 \centering	\includegraphics[width=0.3\textwidth]{Enddokumentation/Anhang/Bilder/WeissNicht.png}
 	\caption{keine Ahnung}
 	\label{fig:keineAhnung}
-\end{figure}Die kurzzeitige Laständerung durch den Abwurf eines Balles kann aufgrund der Trägheit des Motors nicht ausgeglichen werden. Deshalb soll eine Energiebilanz Aufschlüsse über den Drehzahlverlust geben. Der Ball hat zwischen den Punkten 0 und 1 zwei verschiedene Energien. Eine potentielle sowie eine kinetische Energie. Zusätzlich besitzen die Schwungräder aufgrund ihrer Trägheit eine Rotationsenergie.
+\end{figure}
+Die kurzzeitige Laständerung durch den Abwurf eines Balles kann aufgrund der Trägheit des
+Motors nicht ausgeglichen werden. Deshalb soll eine Energiebilanz Aufschlüsse über den
+Drehzahlverlust geben. Der Ball hat zwischen den Punkten 0 und 1 zwei verschiedene Energien.
+Eine potentielle sowie eine kinetische Energie. Zusätzlich besitzen die Schwungräder
+aufgrund ihrer Trägheit eine Rotationsenergie.
 \begin{align}
  &\sum E_{pot} &+&& \sum E_{kin} &&+&& \sum E_{rot} &= 0 \\
- & m_{ball} \cdot \left(h_1 - h_0\right) &+&&\frac{1}{2} \cdot \left( v_1{^{2}} - v_0{^{2}} \right) &&+&&\frac{1}{2} \cdot J \left( \omega_{1^{2}} - \omega_{0^{2}} \right) &= 0
+ & m_{ball} \cdot \left(h_1 - h_0\right) &+&&\frac{1}{2} \cdot \left( v_1{^{2}} - v_0{^{2}} \right) &&+&&\frac{1}{2} \cdot J \left( \omega_1{^{2}} - \omega_0{^{2}} \right) &= 0
 \end{align}
 
-Die Berechnung der Anfangsgeschwindigkeit des Balles ist von der Zuführgeschwindigkeit wie folgt abhängig:
+Die Berechnung der Anfangsgeschwindigkeit des Balles ist von der Zuführgeschwindigkeit wie
+folgt abhängig:
 \begin{equation}
  v_0 = v_{band} \cdot \cos(\beta)
 \end{equation}
@@ -114,7 +130,10 @@ Das resultierende Trägheitsmoment beträgt $0.00018 kg m^2$\\
  \caption{keine Ahnung}
  \label{abb:AbwurfBild}
 \end{wrapfigure}
-Zwischen der Abwurfgeschwindigkeit und der Winkelgeschwindigkeit gibt es eine Relation. Dabei wird angenommen, dass der Ball ohne Schlupf die Schwungräder durchläuft. Im Eintrittspunkt wird der Ball mit einem Sprung beschleunigt. Beim Winkel alpha=0 ist die Geschwindigkeit am höchsten. Danach wird der Ball wieder abgebremst.
+Zwischen der Abwurfgeschwindigkeit und der Winkelgeschwindigkeit gibt es eine Relation.
+Dabei wird angenommen, dass der Ball ohne Schlupf die Schwungräder durchläuft. Im
+Eintrittspunkt wird der Ball mit einem Sprung beschleunigt. Beim Winkel alpha=0 ist die
+Geschwindigkeit am höchsten. Danach wird der Ball wieder abgebremst.
 \begin{align}
 v_1 &= v_u \cdot \cos(\alpha)\\
 v_u &= 4\pi \cdot R_s \cdot n_1
@@ -137,9 +156,11 @@ Nun kann die Energiegleichung aufgestellt werden:
 \end{multline}
 Berechnet mit den gegebenen Werten von: $mBall = 0.055 kg$, $g = 9.81\frac{N}{kg}$, $L = 0.146 m$, $R_s = 0.040 m$, $v_{Band} = 0 \frac{m}{s}$, $J = 0.00018 kgm^2$, $n_0 = 41\frac{U}{s}$, $a = 12.84^\cdot$ ergebt sich eine Drehzahl von $24.2 \frac{U}{s}$. Dies entspricht 58\% der Nenndrehzahl.\\
 \\
-Verdoppelt man nun das Trägheitsmoment J, so steigt die Nenndrehzahl auf $29.6 \frac{U}{s}$ an. Dies entspricht 71\% der Nenndrehzahl.\\
+Verdoppelt man nun das Trägheitsmoment J, so steigt die Nenndrehzahl auf $29.6 \frac{U}{s}$
+an. Dies entspricht 71\% der Nenndrehzahl.\\
 \\
-Als nächstes wird die Zeit für das Beschleunigen der Räder von der abgebremsten Drehzahl wieder auf die Nenndrehzahl berechnet.
+Als nächstes wird die Zeit für das Beschleunigen der Räder von der abgebremsten Drehzahl
+wieder auf die Nenndrehzahl berechnet.
 \begin{align}
  M &= \alpha \cdot J\\
  n_0 &= n_1 + \alpha \cdot t
@@ -148,5 +169,6 @@ Somit gilt:
 \begin{equation}
  t = \frac{n_0 - n_1}{\alpha} = \frac{\Delta n \cdot J}{M}
 \end{equation}
-Wir setzen nun vereinfacht, für das Trägheitsmoment, dieses des Schwungrades ein. Das Moment des Motors soll $0.5 Nm$ betragen. Somit resultiert ein t von $6 ms$. 
+Wir setzen nun vereinfacht, für das Trägheitsmoment, dieses des Schwungrades ein. Das Moment
+des Motors soll $0.5 Nm$ betragen. Somit resultiert ein t von $6 ms$. 
 
