@@ -9,7 +9,7 @@
 	Eine Befestigung an der Front des Gerätes bietet sich an, da dort eine hohe Stabilität vorhanden ist, 
 	was für eine optimale Bildaufnahme wichtig ist.\\
 	
-	\paragraph{Korberkennung\\}
+	\paragraph{Korberkennung}$~~$\vspace{2mm}\\
 		Für die Bestimmung der Position des Korbes wurde ein Algorithmus entwickelt und in Java implementiert. 
 		Dieser bedient sich des Umstandes, dass der Korb deutlich dunkler als der Hintergrund ist. 
 		Um mit dem von der Kamera zuvor aufgenommenen Bild arbeiten zu können, müssen die Ränder abgeschnitten werden 
@@ -21,10 +21,11 @@
 		über die Pixel iteriert um dabei eine feste Kontur zu finden. Diese feste Kontur wird dabei definiert durch eine
 		bestimmte Anzahl weisse Pixel, auf welche wiederum eine Menge schwarzer Pixel folgen muss. 
 		Da dieser Prozess immer in derselben horizontalen Ebene stattfindet kann durch eine abschliessende Berechnung 
-		der Mittelpunkt des Korbes und der damit verbundene Winkel des Ballwerfers zum Korb trigonometrisch bestimmt werden.\\
+		der Mittelpunkt des Korbes und der damit verbundene Winkel des Ballwerfers zum Korb trigonometrisch bestimmt werden.
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=0.9\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Flowchart_Korberkennung.jpg}
+			\includegraphics[width=0.93\textwidth,clip,trim=0mm 5mm 0mm 10mm]
+			{Enddokumentation/Loesungskonzept/Bilder/Flowchart_Korberkennung.jpg}
 			\caption{Ablaufdiagramm zum Korberkennungs-Algorithmus}
 			\label{fig:KorberkennungFlowchart}
 		\end{figure}
