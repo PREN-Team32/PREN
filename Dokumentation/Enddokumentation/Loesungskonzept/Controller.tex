@@ -14,6 +14,6 @@
 	\end{wrapfigure}
 	Die Abbildung \ref{fig:Blockschaltbild_Controller} zeigt auf, wie die Controller-Hardware aufgebaut wird. 
 	Die Brushless-Motor- und Stepper-Ansteuerung wird auf separaten Boards realisiert, wobei die Stepper-Hardware durch die PREN-ET-Gruppe
-	entwickelt und in dieser Gruppe eingesetzt wird. Als Schnittstelle zwischen den Boards und dem Controller wird SPI eingesetzt, 
-	da ein Hauptchip der Stepper-Ansteuerung nur über SPI\footnote{\textbf{S}erial \textbf{P}eripheral \textbf{I}nterface, Dabei handelt es sich um ein synchronen seriellen Datenbus} angesprochen werden kann. Die Kommunikation mit dem Smartphone wir über UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver \textbf{T}ransmitter, Dabei handelt es sich um ein asynchrone serielle Schnittstelle} stattfinden, 
+	entwickelt und in dieser Gruppe eingesetzt wird. Als Schnittstelle zwischen den Boards und dem Controller wird SPI\footnote{\textbf{S}erial \textbf{P}eripheral \textbf{I}nterface, Dabei handelt es sich um ein synchronen seriellen Datenbus} eingesetzt, 
+	da ein Hauptchip der Stepper-Ansteuerung nur über SPI angesprochen werden kann. Die Kommunikation mit dem Smartphone wir über UART\footnote{\textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver \textbf{T}ransmitter, Dabei handelt es sich um ein asynchrone serielle Schnittstelle} stattfinden, 
 	das über den FTDI-Chip auf USB emuliert wird. Die Ansteuerung des DC-Motors wird mittels PWM\footnote{\textbf{P}ulse \textbf{W}idth \textbf{M}odulation, Pulsweitenmodulation} realisiert.
