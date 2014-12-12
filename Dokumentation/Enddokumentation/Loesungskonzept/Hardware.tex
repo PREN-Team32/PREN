@@ -1,2 +1,13 @@
 \subsubsection{Stepper-Motor}
-Die Ansteuerung wird in der ET-Gruppe erarbeitet und hier eingesetzt. Die Dokumentation ist im Anhang \ref{Stepper_Dokumentation} angehängt.
+    Die Ansteuerung wird in der ET-Gruppe erarbeitet und hier eingesetzt. Die Dokumentation ist im Anhang \ref{Stepper_Dokumentation} angehängt.
+    %
+    %
+    %
+\subsubsection{DC-Motor}
+    Der Antrieb des Förderbands muss nur in einer Richtung funktionierten. Deshalb ist die Ansteuerung besonders einfach. Die Steuerung des DC-Motors erfolgt mittels eines PWM-Signals, das über einen entsprechenden Transistor direkt angesteuert wird. Abbildung \ref{fig:Schema_DC-Motor} zeigt, wie die Ansteuerung des DC-Motors umgesetzt wird.
+    \begin{figure}[h!] %{0.45\textwidth}
+    	\centering
+    	\includegraphics[width=0.4\textwidth]{Enddokumentation/Loesungskonzept/Bilder/SchemaDcMotor.png}
+    	\caption{Schema der DC-Motoransteuerung}
+    	\label{fig:Schema_DC-Motor}
+    \end{figure}
