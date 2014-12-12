@@ -199,5 +199,61 @@ Abwurfgeschwindigkeit von $4.56 \frac{m}{s}$ Die nachfolgende Abbildung
 	\label{fig:Wurfparabel1}
 \end{figure}
 
+\textbf{Berechnung des Drehmoment des Förderbands}\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{Enddokumentation/Anhang/Bilder/FoerderbandSkizze.jpg}
+	\caption{Erläuterungen zur Förderbandberechnung}
+\end{figure}\\
+Formalismus:
+\begin{align}
+    \label{equ:DrehmomentFörderband}
+    M_{Motor} &= M_{Antrieb} \cdot i\\
+    i &=\frac{Z_1}{Z_2}\\
+    M_{Antrieb} &= F_u \cdot r_A\\
+    F_u &= \mu_T \cdot g \cdot \left(5 \cdot m_B + m_{Umlenkrolle} + m_{Band} \right)\\
+    M_{Motor} &= \mu \cdot g \cdot r_A \cdot \left(5 \cdot m_B + m_{Umlenkrolle} + m_{Band}\right) \cdot \frac{Z_1}{Z_2}
+\end{align}
+Verwendete Werte:\\
+$\mu_T = 0.33$\\
+$g = 9.81\frac{m}{s^2}$\\
+$r_A = 0.008 m$\\
+$m_B = 0.055 kg$\\
+$m_{Umlenkrolle} = 0.020 kg$\\
+$m_{Band} = 0.035 kg$\\
+$Z_1 = 50$\\
+$Z_2 = 10$\\
+Daraus ergibt sich ein Drehmoment von $0.0017 Nm$ = \uuline{$1.7 Nmm$}\\
+\\
+\textbf{Berechnung Drehmoment des Ausrichtungsmechanismus}\\
+\begin{wrapfigure}{r}{0.43\textwidth}
+	\centering
+	\includegraphics[width=0.45\textwidth]{Enddokumentation/Anhang/Bilder/NotizBerechnungDrehmomentStepper.jpg}
+	\caption{Erläuterungen zur Schrittmotorberechnung}	
+\end{wrapfigure}
+Formalismus:
+\begin{align}
+    F_{Losteil} &= m_{Losteil} \cdot g\\
+    F_2 &= F_{Losteil} \cdot 0.1
+\end{align}
 
+\begin{align}
+    M_{Drehung} &= L \cdot F_{2R}\\
+    F_{2R} &= \mu_H \cdot F_2
+\end{align}
+
+\begin{align}
+    M_{Motor} &= F_z \cdot r\\
+    F_z &= \frac{M_{Drehung}}{R}\\
+    M_{Motor} &=\frac{L \cdot \mu_H \cdot m_{Losteil} \cdot g \cdot 0.1}{R} \cdot r
+\end{align}
+Verwendete Werte:\\
+$L = 0.437m$\\
+$\mu_H = 0.2$\\
+$m_{Losteil} = 1.6 kg$\\
+$g = 9.81 \frac{m}{s^2}$\\
+$R = 0.28 m$\\
+$r = 0.01 m$\\
+Daraus ergibt sich ein Drehmoment von \\
+$0.0049 Nm$ = \uuline{$4.9 Nmm$}\\
 
