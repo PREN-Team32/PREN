@@ -24,13 +24,24 @@
             \label{abb:ZeitlicheAnsteuerungBrushlessMotor}
         \end{wrapfigure}
     \fi
-        Brushless-Motoren (BLDC-Motoren) sind Synchron-Drehstrom-Motoren. Das bedeutet, sie
-        werden mittels eines kontinuierlichen magnetischen Drehfeldes in Bewegung gesetzt.
-        Dabei ist darauf zu achten, dass der Läufer dem Drehfeld synchron folgen kann,
-        daher auch die Namensbezeichnung des Motors. Falls der Läufer dem Drehfeld nicht
-        folgen kann, wird keine Spannung vom Rotor in die Statorwicklungen induziert, die
-        der Erregerspannung entgegenwirkt. Daraus folgt, dass ein immenser Strom fliesst, 
-        der nur von der Wicklungsimpedanz des Motors begrenzt wird.\\
+        Brushless-Motoren (BLDC-Motoren) sind Synchron-Drehstrom-Motoren. Das 
+        bedeutet, sie werden mittels eines kontinuierlichen magnetischen 
+        Drehfeldes in Bewegung gesetzt.  Dabei ist darauf zu achten, dass der 
+        Läufer dem Drehfeld synchron folgen kann, daher auch die 
+        Namensbezeichnung des Motors. Falls der Läufer dem Drehfeld nicht 
+        folgen kann, wird keine Spannung vom Rotor in die Statorwicklungen 
+        induziert, die der Erregerspannung entgegenwirkt. Daraus folgt, dass 
+        ein immenser Strom fliesst, der nur von der Wicklungsimpedanz des 
+        Motors begrenzt wird. Das Drehmoment ist abhängig vom Polradwinkel und 
+        erreicht sein Maximum bei einem Polradwinkel von 90$^\circ$. Die 
+        Kommutierung wird entweder als Sinuskommutierung oder als 
+        Blockkommutierung ausgeführt. Die Sinuskommutierung bildet die 
+        Sinusform eines dreiphasigen Netzes nach. Die Sinusform kann mit einem 
+        Rechtecksignal angenähert werden. Dabei spricht man von einer 
+        Blockkommutierung. Diese ist einfacher zu realisieren, aber erreicht 
+        nicht das selbe Drehmoment wie eine Sinuskommutierung. In diesem 
+        Projekt wird aufgrund der einfacheren implementierung eine 
+        Blockkommutierung realisiert. \\
         \ifSTANDALONE
            \begin{figure}[h!]
                \centering
@@ -69,7 +80,8 @@
         In der Controller-Logik muss der Zeitunterschied der Kommutierung 
         bis zum durchschreiten des Sternpunktes gemessen werden. Diese Zeit 
         muss noch einmal abgewartet werden, bevor die Kommutierung durchgeführt 
-        wird.
+        wird. Falls der Motor über einen Anschluss für den Sternpunkt 
+        verfügt, kann auch dieser verwendet werden. 
     \ifSTANDALONE
     \subsection{Neuer Ansatz}
     \fi
@@ -144,3 +156,25 @@
             $U_l = \bar{H_1} \wedge H_2$ & $V_l = \bar{H_2} \wedge H_3$ & $W_l = H_1 \wedge \bar{H_3}$
         \end{tabular}
         \fi
+    \ifSTANDALONE
+    \subsection{Schnittstelle}
+    \fi
+    \ifEMBED
+    \paragraph{Schnittstelle}$~~$\vspace{2mm}\\
+    \fi
+        Die Kommunikation zur Motoransteuerung erfolgt mittels SPI. Die benötigen Pins sind in der
+        Abbildung \ref{abb:SchnittstelleBrushlessBoard} ersichtlich.
+        \begin{table}[h!]
+            \begin{tabular}{ll}
+                Pin     & Funktion \\
+        \hline  SCK     & Bustakt \\
+                MISO    & Master in Slave out \\
+                MOSI    & Master out Slave in \\
+                CS      & Chip select \\
+                Int     & Interrupt \\
+                Reset   & Reset \\
+            \end{tabular}
+           	\centering
+           	\caption{Schnittstelle des Brushless-Boards} 
+            \label{abb:SchnittstelleBrushlessBoard}
+        \end{table}
