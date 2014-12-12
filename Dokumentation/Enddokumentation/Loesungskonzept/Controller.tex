@@ -5,14 +5,14 @@
 	wird dieser den Motor der Schwungräder aktivieren und auf Nenndrehzahl drehen lassen. Weiter erhält der Controller vom Master die Angabe, 
 	in welchem Winkel sich der Korb zum Gerät befindet. Anhand dieser werden die benötigten Schritte berechnet und die resultierenden Befehle 
 	an die Motorsteuerung werden abgesetzt. Sobald die Abwurfeinheit die richtige Position eingenommen hat, wird die Ballzuführung aktiviert. 
-	Mit einem kleinen Sensors werden die Bälle gezählt und wenn der letzte Ball abgefeuert wurde, wird dies dem Smartphone signalisiert.\\
+	Mit einem Sensor werden die Bälle gezählt und sobald der letzte Ball abgefeuert wurde, wird dies dem Master wiederum signalisiert zur Ausgabe des Endsignals.\\
 	\begin{wrapfigure}{r}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.44\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Blockschaltbild_Controller.png}
 		\caption{Blockschaltbild der Controller-Hardware}
 		\label{fig:Blockschaltbild_Controller}
 	\end{wrapfigure}
-	Die Abbildung \ref{fig:Blockschaltbild_Controller} zeigt auf, wie die Controller-Hardware aufgebaut sein wird. 
+	Die Abbildung \ref{fig:Blockschaltbild_Controller} zeigt auf, wie die Controller-Hardware aufgebaut wird. 
 	Die Brushless-Motor- und Stepper-Ansteuerung wird auf separaten Boards realisiert, wobei die Stepper-Hardware durch die PREN-ET-Gruppe
 	entwickelt und in dieser Gruppe eingesetzt wird. Als Schnittstelle zwischen den Boards und dem Controller wird SPI eingesetzt, 
 	da ein Hauptchip der Stepper-Ansteuerung nur über SPI angesprochen werden kann. Die Kommunikation mit dem Smartphone wir über UART stattfinden, 
