@@ -34,11 +34,11 @@
     %
     % Start mit der eigentlichen Arbeit
     %  
-    \newpage
     \input{Enddokumentation/Einleitung}
-%    \newpage
-%    \input{DasTeam/Zielsetzung}
     \newpage
+    %
+    % Verschiedene Varianten
+    %
     \input{Enddokumentation/Varianten/VerschiedeneVarianten}
     %
     % Lösungskonzept
@@ -60,17 +60,17 @@
     \input{Enddokumentation/Loesungskonzept/Antriebsstrang}
     \input{Enddokumentation/Loesungskonzept/Versorgungskonzept}
     \input{Enddokumentation/ET_Gruppe/common/Hardwarezusammenarbeit}
-    
+    \newline
     \input{\EtPath/Ansteuerung}
     \input{\EtPath/fallback}
     \input{\EtPath/encoder}
     \input{Enddokumentation/Loesungskonzept/Softwarearchitektur}
-%    %
+    %
     % Tests
     %
     \clearpage
     \section{Testberichte}
-%    \input{Enddokumentation/Tests/Tests}
+    %\input{Enddokumentation/Tests/Tests}
     \input{Funktionstests/Ballmaschine}
     \newpage
     \input{Funktionstests/Pneumatikzylinder}
@@ -116,7 +116,7 @@
 		\clearpage
 		\pagenumbering{Roman} % römische Nummerierung des Anhangs (Grosse Buchstaben)
 		\section{Anhang}	            
-			\input{Enddokumentation/Anhang/Berechnungen}
-			\input{Enddokumentation/Anhang/StepperAnhang}
+		\input{Enddokumentation/Anhang/Berechnungen}
+		\input{Enddokumentation/Anhang/StepperAnhang}
 	\end{appendix}  
 \end{document}
