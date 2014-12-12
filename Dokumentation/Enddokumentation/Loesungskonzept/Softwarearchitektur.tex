@@ -1,6 +1,6 @@
 \subsection{Software-Architektur}
 	\subsubsection{Systemübersicht}
-	Zur Übersicht über den erarbeiteten Lösungsansatz bietet sich die Darstellung durch ein Kontextdiagramm an. Darin zu erkennen sind die fünf Hauptkomponenten  DesktopViewer, CoreApp, Detector, MediaCommunication und ControllerCommunication. Weiter enthält das System mindestens drei Schnittstellen, einerseits die Bluetooth Schnittstelle zwischen Startgerät und Ballwerfer, des weiteren muss die Kommunikation mit Kamera und Controller gewährleistet sein.\\ 
+	Zur Übersicht über den erarbeiteten Lösungsansatz bietet sich die Darstellung durch ein Kontextdiagramm an. Darin zu erkennen sind die fünf Hauptkomponenten  DesktopViewer, CoreApp, Detector, MediaCommunication und ControllerCommunication. Weiter enthält das System mindestens drei Schnittstellen, einerseits die Bluetooth Schnittstelle zwischen Startgerät und Ballwerfer, des Weiteren muss die Kommunikation mit Kamera und Controller gewährleistet sein.\\ 
 	Die Schnittstelle zur Kamera sollte, wenn wie geplant ein Smartphone verwendet wird, bereits durch das entsprechende Betriebssystem gegeben sein, weshalb in diesem Dokument nicht weiter auf diese Schnittstelle eingegangen wird. 
 \begin{figure}[h!]
 		\centering
@@ -49,9 +49,9 @@
 		\includegraphics[width=0.9\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Sequenzdiagramm.jpg}
 		\caption{Sequenzidagramm}		
 	\end{figure}
-Ein User gibt den Startbefehl für den Roboter durch die Komponente desktopviewer, die auf einem Computer(Laptop) ausgeführt wird. Desktopviewer baut eine Bluetooth-Connection mit der Komponente Coreapp auf, welche auf dem Smartphone ausgeführt wird, und sendet anschliessend das Startsignal welches durch den User ausgelöst wird. \\
-Ab diesem Zeitpunkt läuft die Applikation völlig autonom. Die coreapp ruft als erstes die mediacommunication Komponente auf und schiesst ein Foto. Coreapp ruft die Komponente 	detektor auf und übergibt dieser das Foto, welche daraufhin den Winkel ausrechnet.\\
-Der berechnete Winkel wird an die Komponente controllercommunication übergeben. Die Komponente baut die Verbindung zum FTDI-Controller auf und übergibt diesem den Winkelwert, danach wartet die Komponente bis der FTDI-Controller das Ende des Ballwurfes zurückgibt. Die Komponente controllercommuncation übergibt an die Coreapp die Meldung das der Roboter fertig ist. \\
-Coreapp ruft die medacommunication Komponente auf welche das Programmende signalisiert.
+Der Benutzer gibt den Startbefehl für den Roboter über die Komponente DesktopBiewer, die auf einem Computer(Laptop) ausgeführt wird. Der DesktopViewer baut eine Bluetooth-Verbindung mit der Komponente CoreApp auf, welche auf dem Smartphone ausgeführt wird, und sendet anschliessend das Startsignal welches durch den User ausgelöst wird. \\
+Ab diesem Zeitpunkt läuft die Applikation völlig autonom. Die CoreApp ruft als erstes die MediaCommunication Komponente auf und schiesst ein Foto. CoreApp aktiviert nun die Komponente Detector und übergibt dieser das Foto, welche daraufhin den Winkel errechnet.\\
+Der gefundene Winkel wird anschliessend an die Komponente ControllerCommunication übergeben, welche die Verbindung zum FTDI-Controller aufbaut und diesem den Winkelwert übergibt. Daraufhin wartet die Komponente bis der FTDI-Controller das Ende des Ballwurfes zurückgibt. ControllerCommunication übergibt nun an die CoreApp die Meldung, dass der Prozess beendet wurde. \\
+Coreapp ruft zum Schluss wiederrum die MediaCommunication Komponente auf welche das Programmende signalisiert.
 		
 		
