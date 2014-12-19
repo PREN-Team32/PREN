@@ -7,7 +7,9 @@
 *.tps
 *.bbl
 *.blg
+*.lot
 Dokumentation/Dokumentation.pdf
-Dokumentation/Dokumentation.lot
 Dokumentation/Anhangsdokument.pdf
-Dokumentation/Anhangsdokument.pdf
+Dokumentation/Morphologie.pdf
+Dokumentation/Recherche.pdf
+Dokumentation/Team.pdf
