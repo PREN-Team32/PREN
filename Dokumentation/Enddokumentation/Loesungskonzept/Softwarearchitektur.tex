@@ -45,7 +45,7 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=1\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Sequenzdiagramm.jpg}
+		\includegraphics[width=1\textwidth]{Enddokumentation/Loesungskonzept/Bilder/Sequenzdiagramm.png}
 		\caption{Sequenzidagramm}		
 	\end{figure}
 Der Benutzer gibt den Startbefehl für den Roboter über die Komponente DesktopBiewer, die auf einem Computer(Laptop) ausgeführt wird. Der DesktopViewer baut eine Bluetooth-Verbindung mit der Komponente CoreApp auf, welche auf dem Smartphone ausgeführt wird, und sendet anschliessend das Startsignal welches durch den User ausgelöst wird. Ab diesem Zeitpunkt läuft die Applikation völlig autonom. Die CoreApp ruft als erstes die MediaCommunication Komponente auf und schiesst ein Foto. CoreApp aktiviert nun die Komponente Detector und übergibt dieser das Foto, welche daraufhin den Winkel errechnet. Der gefundene Winkel wird anschliessend an die Komponente ControllerCommunication übergeben, welche die Verbindung zum FTDI-Controller aufbaut und diesem den Winkelwert übergibt. Daraufhin wartet die Komponente bis der FTDI-Controller das Ende des Ballwurfes zurückgibt. ControllerCommunication übergibt nun an die CoreApp die Meldung, dass der Prozess beendet wurde. 
