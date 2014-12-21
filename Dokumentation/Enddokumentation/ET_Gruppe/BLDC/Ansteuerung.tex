@@ -13,7 +13,7 @@
     \subsection{Theorie der Ansteuerung}
     \fi
 \ifEMBED
-    \paragraph{Theorie der Ansteuerung}$~~$\vspace{2mm}\\
+    \paragraph{Theorie der Ansteuerung}$~~$\\
     \fi
     \ifEMBED
         \begin{wrapfigure}{r}{0.50\textwidth}
@@ -84,7 +84,7 @@
     \subsection{Neuer Ansatz}
 \fi
 \ifEMBED
-    \paragraph{Neuer Ansatz}$~~$\vspace{2mm}\\
+    \paragraph{Neuer Ansatz}$~~$\\
 \fi
     \ifEMBED
         \begin{wrapfigure}{r}{0.40\textwidth}
@@ -166,9 +166,13 @@
         der Tabelle \ref{abb:SchnittstelleBrushlessBoard} ersichtlich. Der Controller wird benötigt, 
         um eine Zwangskommutierung vorzunehmen, um den Motor in eine Initialdrehung zu versetzen. 
         Sobald der Motor dreht, kann der neue Ansatz funktionieren. Weiter wird auf dem Controller eine 
-        Regelung implementiert, um die Drehzahl des Motors zu regeln. Dabei ist die Idee, dass über SPI 
-        die Solldrehzahl eingestellt werden kann. Die benötigte Zwangskommutierung am Anfang und die 
-        Regelung wird eigenständig vom dem Boardcontroller übernommen.
+        Regelung implementiert, um die Drehzahl des Motors zu regeln. Zusätzlich kann der Winkel 
+        zwischen Detektion und Kommutierung angepasst werden, wenn dies notwendig ist.\\
+        \\
+        Die Idee der Kommunikation mit dem Controller ist, dass über SPI die Solldrehzahl und gegebenenfalls 
+        Parameter eingestellt werden können. Alle weiteren Schritte, wie die benötigte Zwangskommutierung am 
+        Anfang und die Regelung, werden eigenständig vom Boardcontroller vorgenommen.
+        %
         \begin{table}[h!]
             \begin{tabular}{ll}
                 Pin     & Funktion \\
