@@ -22,7 +22,7 @@
 		
 
 		\paragraph{ControllerCommunication}$~~$\vspace{2mm}\\
-		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI-Controller realisiert. Der vom Detektor berechnete Winkel wird hier an den FTDI-Controller übertragen. Anschliessend wartet die Komponente bis der Controller ein Endsignal zurückgibt welches das Ende des Ballwurfs signalisiert.
+		Wie der Name bereits sagt wird an dieser Stelle die Kommunikation mit dem FTDI\footnote{Bezeichnung für einen USB to Serial Chip, FTDI ist der Hersteller Name}-Controller realisiert. Der vom Detektor berechnete Winkel wird hier an den FTDI-Controller übertragen. Anschliessend wartet die Komponente bis der Controller ein Endsignal zurückgibt welches das Ende des Ballwurfs signalisiert.
 		
 	\subsubsection{Schnittstellen-Spezifikation}
 		% Übersicht Schnittstellen fehlt Schnittstellen
@@ -33,7 +33,7 @@
 			\caption{Schnittstellen}		
 		\end{figure}
 		Als weiteres Hauptelement des entworfenen Systems werden im nachfolgenden Abschnitt die in der Grafik erkennbaren Schnittstellen (Bluetooth und Controller) deklariert.
-		
+		\newpage
 		\paragraph{Bluetooth}$~~$\vspace{2mm}\\
 		Die Kommunikation vom Startgerät (Notebook) zum Smartphone (Android Device auf dem Ballwerfer) für die Übermittlung des Startsignals findet mit Bluetooth statt. Die Bluetooth-Komponente auf dem Notebook startet nach Aktivierung ein ‚inquiry‘ (Erkundigung) nach verfügbaren Bluetooth-Geräten. Anschliessend wird eine Service-Anfrage (RFCOMM, eine COM-Schnittstelle) an ein gewünschtes Bluetooth-Gerät gestartet, bei positiver Rückmeldung werden die zwei Geräte gepaart. Eine uni- oder bidirektionale Kommunikation zwischen den Geräten kann nun jederzeit aufgebaut werden. Das eigentliche Startsignal wird ein primitiver Datentyp sein.
 		

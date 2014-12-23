@@ -10,14 +10,16 @@
 	Eine Befestigung an der Front des Gerätes bietet sich an, da dort eine hohe Stabilität vorhanden ist, 
 	was für eine optimale Bildaufnahme wichtig ist.\\
 	\\
-	Falls die Korberkennung aus irgendeinem Grund nicht auf dem Smartphone implementiert werden kann, 
-	wird die Berechnung auf einem externen PC durchgeführt. Eine Kamera würde als Webcam am PC 
-	angeschlossen. Die Montage würde am selben Ort wie das Smartphone vorgenommen. Die Kommunikation 
-	zwischen PC und dem Controller würde wie beim Smartphone über USB realisiert.
+	Falls die Korberkennung nicht auf dem Smartphone implementiert werden kann, 
+	wird die Berechnung auf einem externen PC durchgeführt. In diesem Fall wird eine Webcam am PC 
+	angeschlossen. Die Montage an der Abwurfeinheit bleibt am selben Ort wie das Smartphone bestehen. Die Kommunikation 
+	zwischen PC und dem Controller wäre wie beim Smartphone über USB realisiert.
 	%
 	\paragraph{Korberkennung}$~~$\vspace{2mm}\\
-		Für die Bestimmung der Position des Korbes wurde ein Algorithmus entwickelt und in Java implementiert. Dieser ist in Abbildung \ref{fig:KorberkennungFlowchart} grafisch dargestellt.
-		Der Algorithmus basiert auf der Tatsache, dass der Korb deutlich dunkler als der Hintergrund ist. 
+		Für die Bestimmung der Position des Korbes wurde ein Algorithmus entwickelt und in Java implementiert. 
+		Dieser ist in Abbildung \ref{fig:KorberkennungFlowchart} grafisch dargestellt. Der Algorithmus basiert 
+		auf der Tatsache, dass der Korb deutlich dunkler als der Hintergrund ist. Dies konnte anhand eines 
+		Testversuches unter variablen Lichtbedingungen bestätigt werden. Der Versuch ist in Kapitel \ref{chap:ListTest} aufgeführt.
 		Um mit dem von der Kamera zuvor aufgenommenen Bild arbeiten zu können, müssen die Ränder abgeschnitten werden 
 		(vor allem links und rechts geht der Bildbereich über das Spielfeld hinaus, was das Resultat verfälschen könnte). 
 		Als zweiter Schritt wird über sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die Helligkeit bestimmt 
