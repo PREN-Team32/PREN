@@ -30,6 +30,7 @@
 % Tabellen
     \usepackage{longtable}      % Seitenübergreifende Tabellen
     \usepackage{multirow}       % Zeilen zusammenfassen
+    \usepackage{threeparttable} % benötigt um Fussnoten in einer Tabelle zu machen
 
 % Eigene Tabellen
     % Hellgrau und weiss abwechselnd
@@ -43,11 +44,12 @@
     \usepackage{subcaption}     % Bildunterschrift unter zusammen dargestellten Bildern
     \usepackage{tikz}           % TikZ - "TikZ ist kein Zeichenprogramm"
     \usepackage{wrapfig} 
-        \usetikzlibrary{tikzmark}   % References for hooking tikz graphics to
+    \usetikzlibrary{tikzmark}   % References for hooking tikz graphics to
 
 % Mathematik
     \usepackage{amsmath}        % Strukturierung von Formeln
     \usepackage{amssymb}        % Sonderzeichen für Formeln
+    \usepackage{ulem}           % zum unterstreichen
 
 % Verweise
     \usepackage{makeidx}        % Index
@@ -56,6 +58,7 @@
 % Zitieren
 \usepackage{cite}
 \usepackage{apacite}
+\bibliographystyle{apacite}
 
 % Source-Code Paket
     \usepackage{listings}
@@ -168,16 +171,16 @@
     \makeatletter       % @ Teil des Befehls
     \@ifclassloaded{article}{
         % TODO: Define all dimensions below!!!
-        % \addtolength{\textheight}{3.5cm}
-        % \addtolength{\voffset}{-1.5cm}
-        % \addtolength{\textwidth}{1cm}
-        % \addtolength{\evensidemargin}{-15mm}
-        % \addtolength{\oddsidemargin}{5mm}
+         \addtolength{\textheight}{2.5cm}
+         \addtolength{\voffset}{-1.5cm}
+         \addtolength{\textwidth}{5cm}
+         \addtolength{\evensidemargin}{-25mm}
+         \addtolength{\oddsidemargin}{-25mm}
 
-        % \addtolength{\textheight}{\topmargin-\evensidemargin-\hoffset+\voffset}
-        % \setlength{\topmargin}{\evensidemargin+\hoffset-\voffset}
+         \addtolength{\textheight}{\topmargin-\evensidemargin-\hoffset+\voffset}
+         \setlength{\topmargin}{\evensidemargin+\hoffset-\voffset}
 
-        % \addtolength{\headwidth}{1cm}
+         \addtolength{\headwidth}{0cm}
     }{}
     \makeatother        % @ wieder anderes Zeichen
 
@@ -205,12 +208,12 @@
     % Kopf- und Fusszeile für Artikel
     \makeatletter       % @ Teil des Befehls
     \@ifclassloaded{article}{
-        \fancyhead[L]{}                             % Kopfzeile links
+        \fancyhead[L]{Projektarbeit: Autonomer Ballwerfer}  % Kopfzeile links
         \fancyhead[C]{}                             % zentrierte Kopfzeile
-        \fancyhead[R]{}                             % Kopfzeile rechts
+        \fancyhead[R]{HSLU - T\&A}                             % Kopfzeile rechts
         %
-        \fancyfoot[L]{}                             % Fusszeile links
-        \fancyfoot[C]{}                             % Fusszeile zentriert
+        \fancyfoot[L]{PREN Team 32}                 % Fusszeile links
+        \fancyfoot[C]{HS -2014}                     % Fusszeile zentriert
         \fancyfoot[R]{\thepage}                     % Fusszeile rechts
         %
         \renewcommand{\headrulewidth}{0.4pt}        % obere Trennlinie
