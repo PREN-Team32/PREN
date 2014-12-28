@@ -1,0 +1,64 @@
+\subsubsection{Berechnung Drehmoment Förderband}
+Um einen geeigneten Antrieb für das Förderband zu erörtern, muss das Drehmoment 
+und die Drehzahl bekannt sein.
+\begin{figure}[h!]
+    \begin{tikzpicture}[scale = 1.2]
+    \draw [-,line width=2pt](0,0) circle (10pt);\draw [-,line width=2pt](6,0) circle (10pt); 
+    %beide Kreise der hauptrollen
+    \draw  (0,10pt) -- (6, 10pt); \draw (0,-11pt) -- (6,-11pt); %die beiden Förderbänder-Striche
+    \draw (0,-2pt) -- (0, 2pt); \draw (0cm-2pt,0) -- (0cm+2pt, 0); %Das x der ersten Rolle
+    \draw (6,-2pt) -- (6, 2pt); \draw (6cm-2pt,0) -- (6cm+2pt, 0); %Das x der zweiten Rolle
+    \draw [<-] (6cm-0pt , 5pt) -- (7,0.5)node[right]{$m_{Umlenkrolle}$}; %zeige-Linie auf das 
+    %Hintere Rad mit Text
+    \draw (5,10pt) -- (5, 24pt);\draw (5.7,10pt) -- (5.7, 24pt);\draw (5,24pt) -- (5.7, 24pt);
+    \node  at (5.35,18pt) {$m_B$};
+    \draw (3.875,10pt) -- (3.875, 24pt);\draw (4.575,10pt) -- (4.575, 24pt);\draw (3.875,24pt) 
+    -- (4.575, 24pt);\node  at (4.2,18pt) {$m_B$};
+    \draw (2.75,10pt) -- (2.75, 24pt);\draw (3.45,10pt) -- (3.45, 24pt);\draw (2.75,24pt) -- 
+    (3.45, 24pt);\node  at (3.1,18pt) {$m_B$};
+    \draw (1.625,10pt) -- (1.625, 24pt);\draw (2.325,10pt) -- (2.325, 24pt);\draw (1.625,24pt) 
+    -- (2.325, 24pt);\node  at (1.975,18pt) {$m_B$};
+    \draw (0.5,10pt) -- (0.5, 24pt);\draw (1.2,10pt) -- (1.2, 24pt);\draw (0.5,24pt) -- 
+    (1.2, 24pt);\node  at (.8,18pt) {$m_B$};
+    \draw (0,-18pt) circle (7pt);  \draw [<-] (2pt , -20pt) -- (25pt,-25pt)node[right]
+    {$m_{Antrieb}$}; %zeige-Linie auf das Antriebsrad mit Beschriftung
+    \draw [<-] (-4pt , 4pt) -- (4pt,1.3)node[right]{$z_1 = 50$}; %zeige-Linie auf das linke 
+    %Umlenkrad mit Beschriftung
+    \draw [<-] (-3pt , -19pt) -- (4pt,-1.6)node[right]{$z_2 = 10$}; %zeige-Linie auf das 
+    %Antriebsrad mit Beschriftung
+    \end{tikzpicture}
+   	\centering
+    \caption{Erläuterungen zur Förderbandberechnung}
+\end{figure}
+\begin{align}
+    M_{Motor} &= M_{Antrieb} \cdot i \label{equ:M_Antrieb}\\
+    i &=\frac{z_1}{z_2}\\
+    M_{Antrieb} &= F_u \cdot r_A\\
+    F_u &= \mu \cdot g \cdot \left(5 \cdot m_B + m_{Umlenkrolle} + m_{Band} \right)\label{equ:F_u}
+\end{align}
+\\
+Aus den Formeln \ref{equ:M_Antrieb} bis \ref{equ:F_u} ergibt dies benötigte Drehmoment am Motor. 
+\begin{align}
+    M_{Motor} &= \mu \cdot g \cdot r_A \cdot \left(5 \cdot m_B + m_{Umlenkrolle} + m_{Band}\right) 
+    \cdot \frac{z_1}{z_2} \\
+    M_{Motor} &=\frac{v_{Band}}{2 \cdot r_A \cdot \pi} \cdot i
+\end{align}
+
+\textbf{Berechnungswerte}\\
+\begin{tabular}{lll}
+	\rule{0pt}{11pt} $g$ & $9.81 \frac{N}{kg}$ & \\
+	\rule{0pt}{11pt} $m_{ball}$ & $0.055 kg$ & \\
+	\rule{0pt}{11pt} $m_{Umlenkrolle}$ & $0.020 kg$ & gemäss CAD \\
+	\rule{0pt}{11pt} $m_{Band}$ & $0.035 kg$ & gemäss Datenblatt \\
+	\rule{0pt}{11pt} $z_1$ & $50$ & gewählte Übersetzung \\
+	\rule{0pt}{11pt} $z_2$ & $10$ & gewählte Übersetzung \\
+	\rule{0pt}{11pt} $r_a$ & $0.020 m$ & gemäss Konstruktion \\
+	\rule{0pt}{11pt} $v_{Band}$ & $0.1 \frac{m}{s}$ & vorgegebener Wert \\
+\end{tabular}\\
+\\
+\\
+\textbf{Resultate}\\
+\begin{tabular}{ll}
+	\rule{0pt}{11pt} $M_{motor}$ & $0.0987 Nm$ \\
+		\rule{0pt}{11pt} $n_{motor}$ & $3.98 \frac{1}{s}$ \\
+\end{tabular}

@@ -1,0 +1,33 @@
+\subsubsection{Berechnung Horizontale Ausrichtung}
+Für die Stelleinheit wird ein Schrittmotor eingesetzt. Der Antriebsstrang muss 
+hinsichtlich Drehmoments ausgelegt werden. Die Antriebsritzel wurden so gewählt, 
+dass ein möglichst leichter Schrittmotor verwendet werden kann. 
+\begin{align}
+    F_{Losteil} &= m_{Losteil} \cdot g\\
+    F_2 &= F_{Losteil} \cdot 0.1
+\end{align}
+\begin{align}
+    M_{Drehung} &= L \cdot F_{2R}\\
+    F_{2R} &= \mu_H \cdot F_2
+\end{align}
+\begin{align}
+    M_{Motor} &= F_z \cdot r\\
+    F_z &= \frac{M_{Drehung}}{R}\\
+    M_{Motor} &=\frac{L \cdot \mu_H \cdot m_{Losteil} \cdot g \cdot 0.1}{R} \cdot r
+\end{align}
+
+\textbf{Berechnungswerte}\\
+\begin{tabular}{lll}
+	\rule{0pt}{11pt} $m_{Losteil}$ & $1.6 kg$ & \\
+	\rule{0pt}{11pt} $g$ & $9.81 \frac{N}{kg}$ & \\
+	\rule{0pt}{11pt} $L$ & $0.437 m$ &  \\
+	\rule{0pt}{11pt} $\mu_H$ & $0.2$ & Haftreibungskoeffizient zwischen Rolle und Boden \\
+	\rule{0pt}{11pt} $r$ & $0.01 m$ & \\
+	\rule{0pt}{11pt} $R$ & $0.28 m$ & \\
+\end{tabular}\\
+\\
+\\
+\textbf{Resultate}\\
+\begin{tabular}{ll}
+	\rule{0pt}{11pt} $M_{motor}$ & $0.0049Nm$ \\
+\end{tabular}
