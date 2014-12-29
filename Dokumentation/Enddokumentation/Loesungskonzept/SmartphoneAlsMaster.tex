@@ -25,18 +25,27 @@
 	%
 	\paragraph{Korberkennung}$~~$\vspace{2mm}\\
 		Für die Bestimmung der Position des Korbes wurde ein Algorithmus 
-		eigens entwickelt und in Java implementiert. Auf die Verwendung eines Frameworks (wie beispielsweise OpenCV) wurde verzichtet. Grund dafür liegt in der statischen Problemstellung: Hintergrund, Korbform und -farbe sind immer gleich, was die Problemstellung deutlich vereinfacht. Aufgrund dieser Ausgangslage kann die Erkennungsmechanik relativ simpel gehalten werden. \\
+		eigens entwickelt und in Java implementiert. Auf die Verwendung eines 
+		Frameworks (wie beispielsweise OpenCV) wurde verzichtet. Grund dafür 
+		liegt in der statischen Problemstellung: Hintergrund, Korbform und -farbe 
+		sind immer gleich, was die Problemstellung deutlich vereinfacht. Aufgrund 
+		dieser Ausgangslage kann die Erkennungsmechanik relativ einfach gehalten 
+		werden. \\
 		\\
 		Der Algorithmus 
 		basiert auf der Tatsache, dass der Korb deutlich dunkler als der 
-		Hintergrund ist. Um mit dem von der Kamera zuvor 
-		aufgenommenen Bild arbeiten zu können, müssen die Ränder abgeschnitten 
-		werden (vor allem links und rechts geht der Bildbereich über das Spielfeld 
-		hinaus, was das Resultat verfälschen könnte). Als zweiter Schritt wird 
+		Hintergrund ist. Damit mit einem aufgenommenen Bild gearbeitet werden kann, 
+		müssen die Ränder abgeschnitten werden. Dies ist nötig, da die Kamera einen 
+		grosser horizontaler Öffnungswinkel aufweisen. Dementsprechend geht der 
+		Bildbereich links und rechts deutlich über das Spielfeld 
+		hinaus, was das Resultat verfälschen könnte. Als zweiter Schritt wird 
 		über sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die 
-		Helligkeit bestimmt anhand einer vordefinierten Schwelle entschieden, 
-		ob es zum Hintergrund (heller) oder zum Korb (dunkel) gehört. Ein genügend hoher Kontrast ist an dieser Stelle entscheidend. Vor allem Schattenwürfe durch seitliche Beleuchtung stellen ein Problem dar. Deshalb wurde diesbezüglich ein erster Test des entwickelten Prototypen mit zwei Scheinwerfern durchgeführt (siehe \ref{chap:LichtTest}).
-		Als nächster Schritt 
+		Helligkeit anhand einer vordefinierten Schwelle bestimmt, ob es zum 
+		Hintergrund (heller) oder zum Korb (dunkel) gehört. Ein genügend hoher 
+		Kontrast ist an dieser Stelle entscheidend. Vor allem Schattenwürfe durch 
+		seitliche Beleuchtung stellen ein Problem dar. Deshalb wurde diesbezüglich 
+		ein erster Test des entwickelten Prototypen mit zwei Scheinwerfern 
+		durchgeführt (siehe Kapitel \ref{chap:LichtTest}). Als nächster Schritt 
 		wird der Schwerpunkt der dunklen Pixel bestimmt und anhand des gefundenen 
 		Schwerpunktes entweder von links oder von rechts her in einem bestimmten 
 		horizontalen Bereich (der Korb befindet sich immer auf der selben Höhe)
@@ -46,7 +55,8 @@
 		immer in derselben horizontalen Ebene stattfindet kann durch eine 
 		abschliessende Berechnung der Mittelpunkt des Korbes und der damit 
 		verbundene Winkel des Ballwerfers zum Korb trigonometrisch bestimmt werden.
-		Der Ablauf ist in der nachfolgenden Abbildung grafisch dargestellt.
+		Der Ablauf ist in der Abbildung \ref{fig:KorberkennungFlowchart} grafisch 
+		dargestellt.
 		\begin{figure}[h!]
 			\centering
 			\includegraphics[width=1\textwidth,clip,trim=9mm 115mm 41mm 9mm]
