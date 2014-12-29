@@ -1,4 +1,29 @@
 \subsubsection{Berechnung Drehmoment Förderband}
+Für die Berechnungen werden verschiedene Formelzeichen verwendet, die in 
+der Tabelle \ref{tab:glossarFoerderband} aufgeführt und deren Bedeutung erklärt sind.
+\begin{table}[h!]
+    \begin{tabular}{lcl}
+    \rule{0pt}{11pt}Zeichen & Einheit & Bezeichnung \\
+    \hline\rule{0pt}{11pt} $M_{Motor}$ & $Nm$ & Drehmoment Motor \\
+    \rule{0pt}{11pt}$M_{Antrieb}$ & $Nm$ & Drehmoment an der Antriebstrommel \\
+    \rule{0pt}{11pt}$i$ & $1$ & Übersetzungsverhältnis \\
+	\rule{0pt}{11pt}$z_1$ & $1$ & Zähnezahl getriebenes Rad \\
+	\rule{0pt}{11pt}$z_2$ & $1$ & Zähnezahl Ritzel \\
+	\rule{0pt}{11pt}$F_u$ & $N$ & Umfangskraft an Antriebstrommel \\
+	\rule{0pt}{11pt}$r_A$ & $m$ & Radius der Antriebstrommel \\
+	\rule{0pt}{11pt}$\mu$ & $1$ & Haftreibungskoeffizient Band zu Auflagefläche \\
+	\rule{0pt}{11pt}$g$ & $\frac{N}{kg}$ & Erdbeschleunigung \\
+	\rule{0pt}{11pt}$m_{Ball}$ & $kg$ & Masse des Balles \\
+	\rule{0pt}{11pt}$m_{Umlenkrolle}$ & $kg$ & Masse der Umlenkrolle \\
+	\rule{0pt}{11pt}$m_{Band}$ & $kg$ & Masse des Bandes \\
+	\rule{0pt}{11pt}$v_{Band}$ & $\frac{m}{s}$ & Geschwindigkeit des Bandes \\
+	\rule{0pt}{11pt}$n_{Motor}$ & $\frac{1}{s}$ & Drehzahl Motor \\
+    \end{tabular}
+	\centering
+	\caption{Glossar für die Berechnung des Förderbandes}
+	\label{tab:glossarFoerderband}
+\end{table}
+
 Um einen geeigneten Antrieb für das Förderband zu erörtern, muss das Drehmoment 
 und die Drehzahl bekannt sein.
 \begin{figure}[h!]
@@ -34,14 +59,14 @@ und die Drehzahl bekannt sein.
     M_{Motor} &= M_{Antrieb} \cdot i \label{equ:M_Antrieb}\\
     i &=\frac{z_1}{z_2}\\
     M_{Antrieb} &= F_u \cdot r_A\\
-    F_u &= \mu \cdot g \cdot \left(5 \cdot m_B + m_{Umlenkrolle} + m_{Band} \right)\label{equ:F_u}
+    F_u &= \mu \cdot g \cdot \left(5 \cdot m_{Ball} + m_{Umlenkrolle} + m_{Band} \right)\label{equ:F_u}
 \end{align}
 \\
 Aus den Formeln \ref{equ:M_Antrieb} bis \ref{equ:F_u} ergibt dies benötigte Drehmoment am Motor. 
 \begin{align}
-    M_{Motor} &= \mu \cdot g \cdot r_A \cdot \left(5 \cdot m_B + m_{Umlenkrolle} + m_{Band}\right) 
+    M_{Motor} &= \mu \cdot g \cdot r_A \cdot \left(5 \cdot m_{Ball} + m_{Umlenkrolle} + m_{Band}\right) 
     \cdot \frac{z_1}{z_2} \\
-    M_{Motor} &=\frac{v_{Band}}{2 \cdot r_A \cdot \pi} \cdot i
+    n_{Motor} &=\frac{v_{Band}}{2 \cdot r_A \cdot \pi} \cdot i
 \end{align}
 
 \textbf{Berechnungswerte}\\
@@ -60,5 +85,5 @@ Aus den Formeln \ref{equ:M_Antrieb} bis \ref{equ:F_u} ergibt dies benötigte Dre
 \textbf{Resultate}\\
 \begin{tabular}{ll}
 	\rule{0pt}{11pt} $M_{motor}$ & $0.0987 Nm$ \\
-		\rule{0pt}{11pt} $n_{motor}$ & $3.98 \frac{1}{s}$ \\
+	\rule{0pt}{11pt} $n_{motor}$ & $3.98 \frac{1}{s}$ \\
 \end{tabular}
