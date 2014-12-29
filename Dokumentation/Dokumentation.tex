@@ -1,9 +1,10 @@
-\input{Common/header}
-%\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
+%\input{Common/header}
+\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4;
 %                                            % Schriftgrösse = 10Punkte;
 %                                            % Mathe.-Gl. Modus = linksbündig
 %                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html)
 %
+\usepackage{common/layout}
 \setcounter{tocdepth}{4}   %= Aufnahme in das Inhaltsverzeichnis *
 \setcounter{secnumdepth}{4}  % = Nummerierung vertiefen *
 \newcommand{\EtPath}{Enddokumentation/ET_Gruppe/BLDC}
@@ -53,11 +54,12 @@
     \input{Enddokumentation/Loesungskonzept/Controller}
     \input{Enddokumentation/Loesungskonzept/AufbauMechanik}
     \input{Enddokumentation/Loesungskonzept/Stelleinheit}
-    \newpage
+%    \newpage
     \input{Enddokumentation/Loesungskonzept/Foerderband}
     \input{Enddokumentation/Loesungskonzept/Schwungraeder}
     \input{Enddokumentation/Loesungskonzept/Antriebsstrang}
     \input{Enddokumentation/Loesungskonzept/Versorgungskonzept}
+%    \newpage
     \subsection{Hardware}
     \input{Enddokumentation/ET_Gruppe/common/Hardwarezusammenarbeit}
     \newpage
@@ -92,7 +94,7 @@
     \input{Enddokumentation/Projektplanung_Management/PlanungManagement}
     \input{Enddokumentation/Projektplanung_Management/Kosten}
     \input{Enddokumentation/Projektplanung_Management/Zeit}
-    \newpage
+%    \newpage
     %
     % Reflexion
     %
@@ -109,6 +111,7 @@
     % Einfügen des Quellenverzeichnisses mit einem anderen Namen
     %
     \begin{flushleft}
+        \setlength\bibitemsep{2\itemsep}
         \nocite{*} %Alle Quellen ausgeben
         \renewcommand{\refname}{Literatur- und Quellenverzeichnis}
 %        \{\refname}{Quellenverzeichnis}

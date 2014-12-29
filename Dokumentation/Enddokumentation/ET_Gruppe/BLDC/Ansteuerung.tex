@@ -84,30 +84,31 @@
     \subsection{Neuer Ansatz}
 \fi
 \ifEMBED
-    \paragraph{Neuer Ansatz}$~~$\\
-\fi
-    \ifEMBED
-        \begin{wrapfigure}{r}{0.46\textwidth}
-            \includegraphics[scale=0.46]{\EtPath/Bilder/PrinzipDerRekonstruktion.png}
-            \centering
-            \caption[Schema des Rekonstruktionsprinzip]{Schema des Rekonstruktionsprinzip \cite{HSLU:Pluess}}
-            \label{abb:PrinzipRekonstruktion}
-        \end{wrapfigure}
+    \paragraph{Neuer Ansatz}$~~$\vspace{2mm}\\
     \fi
+%    \ifEMBED
+%        \begin{wrapfigure}{r}{0.4\textwidth}
+%            \includegraphics[scale=0.5]{\EtPath/Bilder/PrinzipDerRekonstruktion.png}
+%            \centering
+%            \caption[Schema des Rekonstruktionsprinzip]{Schema des Rekonstruktionsprinzip \cite{HSLU:Pluess}}
+%            \label{abb:PrinzipRekonstruktion}
+%%            \vspace{1cm}
+%        \end{wrapfigure}
+%    \fi
         In einem modifizierten Ansatz wird versucht, die Hallsensor-Signale 
         aus den Ansteuerungen des Motors zu gewinnen. Hierzu wird 
         eine Schaltung pro Phase benötigt, um die Nulldurchgänge beim 
         virtuellen Sternpunkt detektieren zu können. Die Abbildung 
         \ref{abb:PrinzipRekonstruktion} zeigt die Schaltung, mit der dieser Ansatz 
         realisiert werden kann. 
-    \ifSTANDALONE
+%    \ifSTANDALONE
     	\begin{figure}[h!]
             \centering
             \includegraphics[scale=0.46]{\EtPath/Bilder/PrinzipDerRekonstruktion.png}
            	\caption{Schema des Rekonstruktionsprinzip \protect\cite{HSLU:Pluess}}
             \label{abb:PrinzipRekonstruktion}
         \end{figure}
-    \fi
+%    \fi
         Mit dem Flip-Flop aus Abbildung \ref{abb:PrinzipRekonstruktion} kann die PWM aus dem 
         Sensorsignal unterdrückt werden. Diese rekonstruierten 
         Hallsensor-Signale können direkt logisch verknüpft und genutzt 
@@ -118,7 +119,7 @@
         Tabelle \ref{abb:WahrheitstabelleAnsteuerung} ersichtlich ist. Das 
         Signal $U_h$ symbolisiert den Highside-Transistor der Phase U auf der 
         H-Brücke und die Spalte $U_l$ entspricht dem Lowside-Transistor.\\      
-        
+%        \vspace{3cm}
         \begin{table}[h!]
             \begin{tabular}{ccc||cc|cc|cc||c}
                  $H_1$ & $H_2$ & $H_3$ & $U_h$ & $U_l$ & $V_h$ & $V_l$ & $W_h$ & $W_l$ & Illegal\\
@@ -134,9 +135,8 @@
            	\centering
            	\caption{Wahrheitstabelle der Ansteuerung} 
             \label{abb:WahrheitstabelleAnsteuerung}
-        \end{table}
-        \parindent 0pt Die Tabelle in Abbildung 
-        \ref{abb:WahrheitstabelleAnsteuerung} kann pro Signal zu folgenden 
+        \end{table}\\
+        Die Tabelle in Abbildung \ref{abb:WahrheitstabelleAnsteuerung} kann pro Signal zu folgenden 
         logischen Verknüpfung vereinfacht werden\\
         \\
     \ifSTANDALONE
@@ -158,6 +158,7 @@
     \subsection{Ansteuerungshardware}
     \fi
     \ifEMBED
+    \newpage
     \paragraph{Ansteuerungshardware}$~~$\vspace{2mm}\\
     \fi
         In Kapitel \ref{chap:VersuchsResultat} zeigten sich einige Punkte, die für ein eigenes Board 
