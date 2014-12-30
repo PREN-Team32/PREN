@@ -79,7 +79,9 @@
         bis zum Durchschreiten des Sternpunktes gemessen werden. Diese Zeit 
         muss noch einmal abgewartet werden, bevor die Kommutierung durchgeführt 
         wird. Falls der Motor über einen Anschluss für den Sternpunkt 
-        verfügt, kann auch dieser verwendet werden. 
+        verfügt, kann auch dieser verwendet werden. Da die Position des Rotors 
+        auf diese Weise beim Stillstand nicht ermittelt werden kann, muss der 
+        Motor mit einer Zwangskommutierung gestartet werden. 
 \ifSTANDALONE
     \subsection{Neuer Ansatz}
 \fi
@@ -119,7 +121,7 @@
         Tabelle \ref{abb:WahrheitstabelleAnsteuerung} ersichtlich ist. Das 
         Signal $U_h$ symbolisiert den Highside-Transistor der Phase U auf der 
         H-Brücke und die Spalte $U_l$ entspricht dem Lowside-Transistor.\\      
-%        \vspace{3cm}
+        
         \begin{table}[h!]
             \begin{tabular}{ccc||cc|cc|cc||c}
                  $H_1$ & $H_2$ & $H_3$ & $U_h$ & $U_l$ & $V_h$ & $V_l$ & $W_h$ & $W_l$ & Illegal\\
@@ -135,8 +137,9 @@
            	\centering
            	\caption{Wahrheitstabelle der Ansteuerung} 
             \label{abb:WahrheitstabelleAnsteuerung}
-        \end{table}\\
-        Die Tabelle in Abbildung \ref{abb:WahrheitstabelleAnsteuerung} kann pro Signal zu folgenden 
+        \end{table}
+        \parindent 0pt Die Tabelle in Abbildung 
+        \ref{abb:WahrheitstabelleAnsteuerung} kann pro Signal zu folgenden 
         logischen Verknüpfung vereinfacht werden\\
         \\
     \ifSTANDALONE
@@ -170,9 +173,9 @@
         Regelung implementiert, um die Drehzahl des Motors zu regeln. Zusätzlich kann der Winkel 
         zwischen Detektion und Kommutierung angepasst werden, wenn dies notwendig ist.\\
         \\
-        Die Idee der Kommunikation mit dem Controller ist, dass über SPI die Solldrehzahl und gegebenenfalls 
-        Parameter eingestellt werden können. Alle weiteren Schritte, wie die benötigte Zwangskommutierung am 
-        Anfang und die Regelung, werden eigenständig vom Boardcontroller vorgenommen.
+        Die Kommunikation mit dem Controller soll über SPI erfolgen. Darüber sollen die Solldrehzahl 
+        und gegebenenfalls Parameter eingestellt werden können. Alle weiteren Schritte, wie die benötigte 
+        Zwangskommutierung am Anfang und die Regelung, werden eigenständig vom Boardcontroller vorgenommen.
         %
         \begin{table}[h!]
             \begin{tabular}{ll}
