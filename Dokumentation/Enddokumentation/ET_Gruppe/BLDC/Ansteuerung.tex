@@ -119,7 +119,10 @@
         \ref{abb:ZeitlicheAnsteuerungBrushlessMotor} zu entnehmen ist und der 
         Ansteuerung einer H-Brücke, ergibt sich die Wahrheitstabelle, die in 
         Tabelle \ref{abb:WahrheitstabelleAnsteuerung} ersichtlich ist. Das 
-        Signal $U_h$ symbolisiert den Highside-Transistor der Phase U auf der 
+        Signal $U_h$ symbolisiert den Highside\footnote{Transistor, der gegen 
+        die Versorgungsspannung schaltet. Typischerweise aufwendiger 
+        anzusteuern, da am Gate eine Spannung von einigen Volt über der 
+        Versorgungsspannung angelegt werden muss. }-Transistor der Phase U auf der 
         H-Brücke und die Spalte $U_l$ entspricht dem Lowside-Transistor.\\      
         
         \begin{table}[h!]
@@ -138,6 +141,7 @@
            	\caption{Wahrheitstabelle der Ansteuerung} 
             \label{abb:WahrheitstabelleAnsteuerung}
         \end{table}
+        \newpage
         \parindent 0pt Die Tabelle in Abbildung 
         \ref{abb:WahrheitstabelleAnsteuerung} kann pro Signal zu folgenden 
         logischen Verknüpfung vereinfacht werden\\
@@ -161,7 +165,6 @@
     \subsection{Ansteuerungshardware}
     \fi
     \ifEMBED
-    \newpage
     \paragraph{Ansteuerungshardware}$~~$\vspace{2mm}\\
     \fi
         In Kapitel \ref{chap:VersuchsResultat} zeigten sich einige Punkte, die für ein eigenes Board 
