@@ -27,22 +27,22 @@ der Tabelle \ref{tab:glossarFoerderband} aufgeführt und deren Bedeutung erklär
 Um einen geeigneten Antrieb für das Förderband zu erörtern, muss das Drehmoment 
 und die Drehzahl bekannt sein.
 \begin{figure}[h!]
-    \begin{tikzpicture}[scale = 1.2]
+    \begin{tikzpicture}[scale = 1.3]
         \draw [-,line width=2pt](0,0) circle (10pt);\draw [-,line width=2pt](6,0) circle (10pt); 
         %beide Kreise der Hauptrollen
-        \draw  (0,10pt) -- (6, 10pt); \draw (0,-11pt) -- (6,-11pt); %die beiden Förderbänder-Striche
+        \draw  (0,10pt) -- (6, 10pt); \draw (0,-10.5pt) -- (6,-10.5pt); %die beiden Förderbänder-Striche
         \draw (0,-2pt) -- (0, 2pt); \draw (0cm-2pt,0) -- (0cm+2pt, 0); %Das x der ersten Rolle
         \draw (6,-2pt) -- (6, 2pt); \draw (6cm-2pt,0) -- (6cm+2pt, 0); %Das x der zweiten Rolle
         \draw [<-] (6cm-0pt , -5pt) -- (5.5,-1)node[left]{$m_{Umlenkrolle}$}; %zeige-Linie auf das 
         %Hintere Rad mit Text
-        \draw (0.7,10pt) -- ++(0, 14pt)-- ++(22pt,0) -- ++(0, -14pt);\node  at (1.1,18pt) {$m_{Ball}$};
-        \draw (1.7,10pt) -- ++(0, 14pt)-- ++(22pt,0) -- ++(0, -14pt);\node  at (2.1,18pt) {$m_{Ball}$};
-        \draw (2.7,10pt) -- ++(0, 14pt)-- ++(22pt,0) -- ++(0, -14pt);\node  at (3.1,18pt) {$m_{Ball}$};
-        \draw (3.7,10pt) -- ++(0, 14pt)-- ++(22pt,0) -- ++(0, -14pt);\node  at (4.1,18pt) {$m_{Ball}$};
-        \draw (4.7,10pt) -- ++(0, 14pt)-- ++(22pt,0) -- ++(0, -14pt);\node  at (5.1,18pt) {$m_{Ball}$};
-        \draw (0,-18pt) circle (7pt);  \draw [<-] (2pt , -20pt) -- (25pt,-25pt)node[right]
+        \draw (0.3,10pt)node[above right] {$m_{Ball}$} -- ++(0, 14pt)-- ++(24pt,0) -- ++(0, -14pt);
+        \draw (1.4,10pt)node[above right] {$m_{Ball}$} -- ++(0, 14pt)-- ++(24pt,0) -- ++(0, -14pt);
+        \draw (2.5,10pt)node[above right] {$m_{Ball}$} -- ++(0, 14pt)-- ++(24pt,0) -- ++(0, -14pt);
+        \draw (3.6,10pt)node[above right] {$m_{Ball}$} -- ++(0, 14pt)-- ++(24pt,0) -- ++(0, -14pt);
+        \draw (4.7,10pt)node[above right] {$m_{Ball}$} -- ++(0, 14pt)-- ++(24pt,0) -- ++(0, -14pt);
+        \draw (0,-17.5pt) circle (7pt);  \draw [<-] (2pt , -20pt) -- (25pt,-25pt)node[right]
         {$m_{Antrieb}$}; %zeige-Linie auf das Antriebsrad mit Beschriftung
-        \draw (-1pt,-18pt) -- (1pt,-18pt); \draw (0,-19pt) -- (0, -17pt); %Das x der zweiten Rolle
+        \draw (-1pt,-17.5pt) -- (1pt,-17.5pt); \draw (0,-18.5pt) -- (0, -16.5pt); %Das x der zweiten Rolle
         \draw [<-] (-4pt , 4pt) -- (4pt,1.3)node[right]{$z_1 = 50$}; %zeige-Linie auf das linke 
         %Umlenkrad mit Beschriftung
         \draw [<-] (-3pt , -19pt) -- (4pt,-1.6)node[right]{$z_2 = 10$}; %zeige-Linie auf das 
