@@ -17,11 +17,9 @@
 	an der Front des Gerätes bietet sich an, da dort eine hohe Stabilität 
 	vorhanden ist, was für eine optimale Bildaufnahme wichtig ist.\\
 	\\
-	Falls die Korberkennung nicht auf dem Smartphone implementiert werden kann, 
+	Falls die Korberkennung nicht auf dem Smartphone umgesetzt werden kann, 
 	wird die Berechnung auf einem externen PC durchgeführt. In diesem Fall wird 
-	eine Webcam am PC angeschlossen. Die Montage an der Abwurfeinheit bleibt am 
-	selben Ort wie das Smartphone bestehen. Die Kommunikation zwischen PC und 
-	dem Controller wäre wie beim Smartphone über USB realisiert.
+	eine Webcam am PC angeschlossen. Die Montage an der Abwurfeinheit bliebe unverändert. Genauso die Kommunikation mit dem Controller, welche immer noch mittels USB realisiert würde.
 	%
 	\newpage
 	\paragraph{Korberkennung}$~~$\vspace{2mm}\\
@@ -29,19 +27,18 @@
 		eigens entwickelt und in Java implementiert. Auf die Verwendung eines 
 		Frameworks (wie beispielsweise OpenCV) wurde verzichtet. Grund dafür 
 		liegt in der statischen Problemstellung: Hintergrund, Korbform und -farbe 
-		sind immer gleich, was die Problemstellung deutlich vereinfacht. Aufgrund 
-		dieser Ausgangslage kann die Erkennungsmechanik einfach gehalten werden. \\
+		sind immer gleich, was die Problemstellung stark vereinfacht und die Verwendung eines komplexeren Algorithmus hinfällig macht. Somit kann die Erkennungsmechanik einfach und statisch gehalten werden. Unterstützt wird diese Entscheidung auch durch den grösseren Lerneffekt, welche eine Eigenproduktion mit sich bringt. \\
 		\\
 		Der Algorithmus 
 		basiert auf der Tatsache, dass der Korb deutlich dunkler als der 
 		Hintergrund ist. Damit mit einem aufgenommenen Bild gearbeitet werden kann, 
-		müssen die Ränder abgeschnitten werden. Dies ist nötig, da die Kamera einen 
+		müssen die Ränder abgeschnitten werden. Dies ist notwendig, da die Kamera einen 
 		grossen horizontalen Öffnungswinkel aufweist. Dementsprechend geht der 
 		Bildbereich links und rechts deutlich über das Spielfeld 
 		hinaus, was das Resultat verfälschen könnte. Als zweiter Schritt wird 
 		über sämtliche Pixel des Bildes iteriert. Dabei wird für jedes Pixel die 
 		Helligkeit anhand einer vordefinierten Schwelle bestimmt, ob es zum 
-		Hintergrund (heller) oder zum Korb (dunkel) gehört. Ein genügend hoher 
+		Hintergrund (heller) oder zum Korb (dunkel) gehört. Zur Bestimmung der Helligkeit eines Pixels anhand eines RGB Wertes gibt es mehrere Möglichkeiten, welche sich in Genauigkeit und Performance unterscheiden. (\cite{S:RGB}) Ein genügend hoher 
 		Kontrast ist an dieser Stelle entscheidend. Vor allem Schattenwürfe durch 
 		seitliche Beleuchtung stellen ein Problem dar. Deshalb wurde diesbezüglich 
 		ein erster Test des entwickelten Prototypen mit zwei Scheinwerfern 
